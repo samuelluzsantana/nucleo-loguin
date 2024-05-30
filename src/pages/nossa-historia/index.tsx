@@ -10,9 +10,8 @@ export default function NossaHistoria() {
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
-      <Header>
+      <Header/>
         <p>Nossa Historia</p>
-      </Header>
     </>
   );
 }
