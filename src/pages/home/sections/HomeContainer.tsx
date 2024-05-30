@@ -10,7 +10,7 @@ import assets2 from '@/assets/bg/assets2.png'
 // assets/icons
 import { PiCaretDownLight } from "react-icons/pi";
 
-export default function HomeContainer(){
+export default function HomeContainer() {
 
 
     const words = ["completo", "rápido", "pratico", "moderno"];
@@ -44,11 +44,13 @@ export default function HomeContainer(){
                         </h2>
                     </div>
 
+                    <div className="w-full flex justify-center">
 
-                    <div className="mt-8 w-[15em]">
-                        <Button>
-                            saiba mais
-                        </Button>
+                        <div className="mt-8 w-[15em]">
+                            <Button>
+                                saiba mais
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
