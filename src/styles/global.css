@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.cdnfonts.com/css/metropolis-2');
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Metropolis', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+}
+
+body{
+  font-family: 'Metropolis', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 .p-tabview .p-tabview-nav .p-tabview-ink-bar {

@@ -1,7 +1,11 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const Header = ({ children }) => {
+import { PiNotchesBold } from "react-icons/pi";
+import Logo from "../Logo";
+import { HoverBorderGradient } from "../ui/hover-border-gradient";
+
+const Header = () => {
   const location = useLocation();
 
   const tabs = [
@@ -38,21 +42,23 @@ const Header = ({ children }) => {
     navlinks.classList.toggle("left-[0%]");
   }
 
+
+
   return (
     <>
-      <header className="relative px-3 py-2">
-        <nav className="flex justify-between">
-          <div className="w-[130px] md:w-[200px] flex items-center">Logo</div>
-
+      <header className="relative px-7 md:px-[10em]  py-7 z-50">
+        <nav className="flex justify-between items-center">
+          <div className="w-[130px] md:w-[200px] flex items-center">
+            <Logo height={100} width={100} />
+          </div>
           <div className="flex items-center gap-3">
-            <div className="navLinks duration-500 absolute md:static md:w-auto w-full md:h-auto h-[85vh] bg-white flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5 ">
-              <ul className="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8">
+            <div className="navLinks duration-500 absolute md:static md:w-auto w-full md:h-auto h-[85vh] flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5 ">
+              <ul className="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-8 text-white">
                 {tabs.map((tab) => (
                   <li
                     key={tab.route}
-                    className={`relative max-w-fit pr-3 md:pr-0 py-1 after:bg-gradient-to-r from-[#2b68e0] to-[#e710ea] after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 ${
-                      tab.disabled ? "pointer-events-none opacity-50" : ""
-                    } ${location.pathname === tab.path ? "after:w-full" : ""}`}
+                    className={`relative font-normal max-w-fit pr-3 md:pr-0 py-1 after:bg-loguin-red after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 ${tab.disabled ? "pointer-events-none opacity-50 select-none" : ""
+                      } ${location.pathname === tab.path ? "after:w-full" : ""}`}
                   >
                     <a href={tab.path}>{tab.label}</a>
                   </li>
@@ -61,15 +67,23 @@ const Header = ({ children }) => {
             </div>
 
             <div className="flex items-center gap-2">
-              <p
+              <span
                 onClick={onMenuToggle}
-                className="text-[30px] cursor-pointer md:hidden"
+                className="text-[30px] cursor-pointer md:hidden text-white"
               >
-                x
-              </p>
+                <PiNotchesBold size={20} />
+              </span>
             </div>
           </div>
-          <div className="flex">Button</div>
+          <div className="hidden md:block ">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="bg-white text-loguin-blue flex items-center space-x-2 font-semibold"
+            >
+              <span>Contato</span>
+            </HoverBorderGradient>
+          </div>
         </nav>
       </header>
     </>

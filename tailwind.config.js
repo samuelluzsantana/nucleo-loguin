@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'loguin-red': '#B21B2C',
+        'loguin-blue': '#181724',
+        'loguin-red-dark': '#7e131f'
+      },
+    },
   },
   plugins: [],
 }

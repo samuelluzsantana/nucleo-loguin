@@ -10,9 +10,9 @@ export default function Faq() {
       <Helmet>
         <title>{pageTitle}</title>
       </Helmet>
-      <Header>
-        <p>FAQ</p>
-      </Header>
+      <Header />
+      <p>FAQ</p>
+
     </>
   );
 }

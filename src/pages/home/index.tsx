@@ -1,9 +1,14 @@
 // react
-import Header from "@/components/Header";
 import { Helmet } from "react-helmet";
+// components
+import Header from "@/components/Header";
+// page/sections
+import HomeContainer from "./sections/HomeContainer";
+
 
 export default function Home() {
   const pageTitle = "Núcleo Loguin";
+
 
   return (
     <>
@@ -11,9 +16,14 @@ export default function Home() {
         <title>{pageTitle}</title>
       </Helmet>
 
-      <Header>
-      Home
-      </Header>
+      <Header />
+
+      <main>
+        <HomeContainer />
+      </main>
+
+
+
     </>
   );
 }
