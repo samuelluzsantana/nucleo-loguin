@@ -30,10 +30,19 @@ export default function HomeContainer() {
                                 <span className="mr-0 md:mr-[1rem]">o mais</span>
                                 <span><FlipWords words={words} /> <br /></span>
                             </div>
+
                             <div className="flex flex-col md:flex-row">
                                 <span className="mr-0 md:mr-[1rem]">sistema</span>
-                                <span>integrado <span className="block md:hidden ">de</span></span>
+                                <span className='block md:hidden'>integrado de</span>
+
+                                <span className='hidden md:block'>integrado</span>
+                                
+
+
+
                             </div>
+
+
                             <span className="flex w-full"><span className="hidden mr:0 md:block  md:mr-[1rem]">de</span> gestão gráficas</span>
                         </h1>
 
@@ -44,8 +53,7 @@ export default function HomeContainer() {
                         </h2>
                     </div>
 
-                    <div className="w-full flex justify-center">
-
+                    <div className="w-full flex justify-center md:justify-start ">
                         <div className="mt-8 w-[15em]">
                             <Button>
                                 saiba mais
