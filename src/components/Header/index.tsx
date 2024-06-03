@@ -52,7 +52,7 @@ const Header = () => {
             <Logo height={100} width={100} />
           </div>
           <div className="flex items-center gap-3">
-            <div className="navLinks duration-500 absolute md:static md:w-auto w-full md:h-auto h-[85vh] flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5 ">
+            <div className="navLinks duration-500 absolute md:static md:w-auto w-full md:h-auto h-[85vh] flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5">
               <ul className="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-8 text-white">
                 {tabs.map((tab) => (
                   <li
