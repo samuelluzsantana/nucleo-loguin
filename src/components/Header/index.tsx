@@ -53,6 +53,12 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-3">
             <div className="navLinks duration-500 absolute md:static md:w-auto w-full md:h-auto h-[85vh] flex md:items-center gap-[1.5vw] top-[100%] left-[-100%] px-5 md:py-0 py-5">
+            <div className="absolute bottom-0 left-0 w-full h-full backdrop-blur-lg"></div>
+
+
+
+
+
               <ul className="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-8 text-white">
                 {tabs.map((tab) => (
                   <li
@@ -69,7 +75,7 @@ const Header = () => {
             <div className="flex items-center gap-2">
               <span
                 onClick={onMenuToggle}
-                className="text-[30px] cursor-pointer md:hidden text-white"
+                className="text-[30px] cursor-pointer md:hidden text-white relative z-[11]"
               >
                 <PiNotchesBold size={20} />
               </span>

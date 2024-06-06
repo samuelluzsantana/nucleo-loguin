@@ -18,7 +18,7 @@ export default function HomeContainer() {
     return (
         <>
             <img src={Background}
-                className="relative  select-none bottom-[7em] w-full h-[50em] md:h-[65em]"
+                className="relative  select-none bottom-[7em] w-full h-[50em] md:h-[66em]"
                 alt="Descrição da Imagem"
             />
 
