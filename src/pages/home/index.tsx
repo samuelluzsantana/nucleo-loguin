@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 // page/sections
 import HomeContainer from "./sections/HomeContainer";
 import NossosParceiros from "./sections/NossosParceiros";
+import Seguimentos from "./sections/Seguimentos";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <HomeContainer />
         <NossosParceiros />
+        <Seguimentos />
       </main>
 
 

@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'loguin-red': '#B21B2C',
-        'loguin-blue': '#181724',
+        'loguin-blue': '#171332',
         'loguin-red-dark': '#7e131f'
       },
 
