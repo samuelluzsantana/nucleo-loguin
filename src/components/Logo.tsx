@@ -1,6 +1,6 @@
 import React from 'react';
-import logobranca from '@/assets/GraficaInteligente_FT.png'
-import logoescura from '@/assets/GraficaInteligente_FT2.png'
+import logobranca from '@/assets/GraficaInteligente_FT.png';
+import logoescura from '@/assets/GraficaInteligente_FT2.png';
 
 interface LogoProps {
   height: number;

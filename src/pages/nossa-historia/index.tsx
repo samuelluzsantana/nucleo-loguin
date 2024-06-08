@@ -1,9 +1,9 @@
 // react
-import Header from "@/components/Header";
-import { Helmet } from "react-helmet";
+import Header from '@/components/Header';
+import { Helmet } from 'react-helmet';
 
 export default function NossaHistoria() {
-  const pageTitle = "Nossa Historia";
+  const pageTitle = 'Nossa Historia';
 
   return (
     <>

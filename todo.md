@@ -1,1 +1,1 @@
-- clicar no x e o botão fazer uma animação de fechar 
+- clicar no x e o botão fazer uma animação de fechar

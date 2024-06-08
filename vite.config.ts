@@ -10,7 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-    }
+    },
   },
 
   plugins: [
@@ -19,9 +19,9 @@ export default defineConfig({
       targets: [
         {
           src: 'src/config/web.config',
-          dest: '', 
-        }
-      ]
-    })
+          dest: '',
+        },
+      ],
+    }),
   ],
 });
