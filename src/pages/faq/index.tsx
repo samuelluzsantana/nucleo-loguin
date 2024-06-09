@@ -1,9 +1,9 @@
 // react
-import Header from '@/components/Header';
-import { Helmet } from 'react-helmet';
+import Header from '@/components/Header'
+import { Helmet } from 'react-helmet'
 
 export default function Faq() {
-  const pageTitle = 'Duvidas Frequentes';
+  const pageTitle = 'Duvidas Frequentes'
 
   return (
     <>
@@ -13,5 +13,5 @@ export default function Faq() {
       <Header />
       <p>FAQ</p>
     </>
-  );
+  )
 }

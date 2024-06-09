@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 interface ASquaresProps {
-  width?: number;
-  height?: number;
-  className?: string;
+  width?: number
+  height?: number
+  className?: string
 }
 
 export const ASquares: React.FC<ASquaresProps> = ({ className, height = 186 }) => {
@@ -27,5 +27,5 @@ export const ASquares: React.FC<ASquaresProps> = ({ className, height = 186 }) =
         />
       </svg>
     </div>
-  );
-};
+  )
+}

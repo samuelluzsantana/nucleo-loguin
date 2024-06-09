@@ -1,30 +1,38 @@
-// react
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 // components
-import Button from '@/components/Button';
-import { FlipWords } from '@/components/ui/flip-words';
+import Button from '@/components/Button'
+import { FlipWords } from '@/components/ui/flip-words'
 // assets
-import Background from '@/assets/bg/background.png';
-import assets from '@/assets/bg/assets.png';
-import assets2 from '@/assets/bg/assets2.png';
+import Background from '@/assets/bg/background.png'
+import assets from '@/assets/bg/assets.png'
+import assets2 from '@/assets/bg/assets2.png'
 // assets/icons
-import { PiCaretDownLight } from 'react-icons/pi';
+import { PiCaretDownLight } from 'react-icons/pi'
 
 export default function HomeContainer() {
-  const words = ['completo', 'rápido', 'pratico', 'moderno'];
+  const words = ['completo', 'rápido', 'pratico', 'moderno']
+
+  const scrollToSection = () => {
+    const section = document.getElementById('nossos-parceiros')
+    if (section) {
+      const yOffset = -200 // Altura de deslocamento
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
       <img
         src={Background}
-        className='relative  select-none bottom-[7em] w-full h-[50em] md:h-[66em]'
+        className='relative bottom-[7em] h-[50em] w-full select-none md:h-[66em]'
         alt='Descrição da Imagem'
       />
 
-      <div className='flex flex-col w-full justify-center items-center md:items-start  absolute top-[10em] z-10 text-white'>
-        <div className='texto-e-button ml-0 md:ml-[13em]'>
-          <div className='textos-home '>
-            <h1 className='w-[7.5em] md:w-[9.5em]  text-[2.5em] md:text-6xl leading-[1] font-semibold flex flex-col justify-start'>
+      <div className='absolute top-[10em] z-10 flex w-full flex-col items-center justify-center text-white md:items-start'>
+        <div className='texto-e-button ml-0 md:ml-[9em]'>
+          <div className='textos-home'>
+            <h1 className='flex w-[7.5em] flex-col justify-start text-[2.5em] font-semibold leading-[1] md:w-[9.5em] md:text-6xl'>
               <div className='flex flex-col md:flex-row'>
                 <span className='mr-0 md:mr-[1rem]'>o mais</span>
                 <span>
@@ -35,44 +43,43 @@ export default function HomeContainer() {
               <div className='flex flex-col md:flex-row'>
                 <span className='mr-0 md:mr-[1rem]'>sistema</span>
                 <span className='block md:hidden'>integrado de</span>
-
                 <span className='hidden md:block'>integrado</span>
               </div>
 
               <span className='flex w-full'>
-                <span className='hidden mr:0 md:block  md:mr-[1rem]'>de</span> gestão
+                <span className='mr:0 hidden md:mr-[1rem] md:block'>de</span> gestão
                 gráficas
               </span>
             </h1>
 
-            <h2 className='w-[21em] text-sm mt-8 font-normal md:w-[30em] md:text-xl'>
+            <h2 className='mt-8 w-[21em] text-sm font-normal md:w-[30em] md:text-xl'>
               otimize todos os processos da sua gráfica e estabeleça conexões inteligentes
               e intuitivas entre os setores.
             </h2>
           </div>
 
-          <div className='w-full flex justify-center md:justify-start '>
+          <div className='flex w-full justify-center md:justify-start'>
             <div className='mt-8 w-[15em]'>
               <Button>saiba mais</Button>
             </div>
           </div>
         </div>
 
-        <div className='assets h-full w-full flex justify-between mt-[1.25em] md:mt-[5.25em]'>
+        <div className='assets mt-[1.25em] flex h-full w-full justify-between md:mt-[5.25em]'>
           <img
             src={assets2}
-            className='select-none bottom-[2em] h-[7em] md:h-[15em] md:relative md:bottom-[27em]'
-            alt='Descrição da Imagem'
+            className='bottom-[2em] h-[7em] select-none md:relative md:bottom-[27em] md:h-[15em]'
+            alt='assests de um quadrado vermelho'
           />
 
           <img
             src={assets}
-            className='select-none bottom-[7em] h-[10em]  md:h-[35em] md:relative md:bottom-[10em]'
-            alt='Descrição da Imagem'
+            className='bottom-[7em] h-[10em] select-none md:relative md:bottom-[10em] md:h-[35em]'
+            alt='assests de um quadrado vermelho'
           />
         </div>
 
-        <div className='scroll w-full flex justify-center absolute text-white top-[33em] md:top-[40em]'>
+        <div className='scroll absolute top-[33em] flex w-full justify-center text-white md:top-[40em]'>
           <motion.div
             style={{ top: '43em' }}
             animate={{
@@ -80,7 +87,10 @@ export default function HomeContainer() {
               transition: { duration: 2, repeat: Infinity },
             }}
           >
-            <motion.div className='scroll-assets cursor-pointer'>
+            <motion.div
+              className='scroll-assets cursor-pointer'
+              onClick={scrollToSection}
+            >
               <PiCaretDownLight size={40} className='hidden md:block' />
               <PiCaretDownLight size={20} className='block md:hidden' />
             </motion.div>
@@ -88,5 +98,5 @@ export default function HomeContainer() {
         </div>
       </div>
     </>
-  );
+  )
 }

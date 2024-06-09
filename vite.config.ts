@@ -1,10 +1,10 @@
-import react from '@vitejs/plugin-react';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url'; // Using fileURLToPath
-import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url' // Using fileURLToPath
+import { defineConfig } from 'vite'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url)); // Define __dirname using import.meta.url
+const __dirname = path.dirname(fileURLToPath(import.meta.url)) // Define __dirname using import.meta.url
 
 export default defineConfig({
   resolve: {
@@ -24,4 +24,4 @@ export default defineConfig({
       ],
     }),
   ],
-});
+})

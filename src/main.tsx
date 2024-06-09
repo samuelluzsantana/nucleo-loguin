@@ -1,24 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { createRoot } from 'react-dom/client';
-import { ToastContainer } from 'react-toastify';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { createRoot } from 'react-dom/client'
+import { ToastContainer } from 'react-toastify'
 // context
-import { PrimeReactProvider } from 'primereact/api';
+import { PrimeReactProvider } from 'primereact/api'
 
 // styles
-import './styles/global.css';
-import 'react-toastify/dist/ReactToastify.css';
+import './styles/global.css'
+import 'react-toastify/dist/ReactToastify.css'
 
-import 'primereact/resources/themes/lara-light-cyan/theme.css';
+import 'primereact/resources/themes/lara-light-cyan/theme.css'
 
 // landing
-import Home from './pages/home';
+import Home from './pages/home'
 // faq
-import Faq from './pages/faq';
+import Faq from './pages/faq'
 //nossa historia
-import NossaHistoria from './pages/nossa-historia';
+import NossaHistoria from './pages/nossa-historia'
 
-const root = document.getElementById('root');
+const root = document.getElementById('root')
 createRoot(root!).render(
   <React.StrictMode>
     <PrimeReactProvider>
@@ -32,4 +32,4 @@ createRoot(root!).render(
       </BrowserRouter>
     </PrimeReactProvider>
   </React.StrictMode>
-);
+)
