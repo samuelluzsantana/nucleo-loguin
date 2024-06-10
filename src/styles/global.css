@@ -14,6 +14,21 @@ body {
   font-family: 'Metropolis', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-.p-tabview .p-tabview-nav .p-tabview-ink-bar {
-  background-color: red; /* Define a cor vermelha */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+  top: 0em !important;
+  margin-top: 2em !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #19133a !important;
+}
+
+.swiper-pagination-bullet {
+  width: 4em !important;
+  height: 0.25em !important;
+  border-radius: 0 !important;
 }

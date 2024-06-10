@@ -42,8 +42,8 @@ export default function NossosParceiros() {
               blurBorders={false}
               blurBoderColor={'#fff'}
             >
-              {duplicatedSlides.map(slide => (
-                <Slider.Slide>
+              {duplicatedSlides.map((slide, index) => (
+                <Slider.Slide key={index}>
                   <img
                     src={slide.imagem}
                     alt={slide.alt}
