@@ -6,6 +6,8 @@ import HomeContainer from './sections/HomeContainer'
 import NossosParceiros from './sections/NossosParceiros'
 import Seguimentos from './sections/Seguimentos'
 import Transforme from './sections/Transforme'
+import Segmentos from './sections/Segmentos'
+import Depoimentos from './sections/Depoimentos'
 
 export default function Home() {
   const pageTitle = 'Núcleo Loguin'
@@ -28,6 +30,13 @@ export default function Home() {
         </section>
         <section id='transforme-sua-grafica'>
           <Transforme />
+        </section>
+        <section id='segmentos-graficos'>
+          <Segmentos />
+        </section>
+
+        <section id='Depoimentos'>
+          <Depoimentos />
         </section>
       </main>
     </>
