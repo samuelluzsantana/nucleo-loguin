@@ -9,6 +9,7 @@ import Transforme from './sections/Transforme'
 import Segmentos from './sections/Segmentos'
 import Depoimentos from './sections/Depoimentos'
 import ConhecaMais from './sections/ConhecaMais'
+import Contato from './sections/Contato'
 
 export default function Home() {
   const pageTitle = 'Núcleo Loguin'
@@ -40,6 +41,9 @@ export default function Home() {
         </section>
         <section id='conheca-mais-sobre-nosso-software'>
           <ConhecaMais />
+        </section>
+        <section id='contato'>
+          <Contato />
         </section>
       </main>
     </>
