@@ -10,7 +10,7 @@ import robson from '@/assets/pfp/robson.png'
 import ricardo from '@/assets/pfp/ricardo.png'
 import sidney from '@/assets/pfp/sidney.png'
 // icons
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGlobe, FaLinkedin } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 export default function Depoimentos() {
@@ -62,7 +62,7 @@ export default function Depoimentos() {
 
   return (
     <>
-      <div className='h-[55em] bg-white px-8 text-loguin-blue md:h-[35em] md:px-[12em]'>
+      <div className='h-[40em] bg-white px-8 text-loguin-blue md:h-[35em] md:px-[12em]'>
         <div className='titulo-depoimentos mt-[10em] text-center md:text-left'>
           <h3 className='text-2xl font-bold md:text-3xl'>Depoimentos</h3>
           <p className='mt-2 text-sm font-normal md:text-[1.5rem]'>
@@ -70,20 +70,21 @@ export default function Depoimentos() {
           </p>
         </div>
 
-        <div className='cards-depoimentos'>
+        <div className='cards-depoimentos w-full'>
           <Swiper
             pagination={{ clickable: true }}
             modules={[Pagination]}
             slidesPerView={isMobile ? 'auto' : 3}
             centeredSlides={true}
             loop={true}
-            className='cards-swipers mt-8 py-[2em]'
+            spaceBetween={25}
+            className='cards-swipers mt-8'
             onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
           >
             {depoimentos.map((dep, index) => (
-              <SwiperSlide key={index} className={`flex items-center`}>
+              <SwiperSlide key={index} className={`flex w-full items-center`}>
                 <div
-                  className={`h-[24em] w-full rounded-lg border bg-white p-4 md:h-[15em] md:w-[30em] ${activeIndex === index ? 'border-[2.4px] border-zinc-300' : 'z-0'} `}
+                  className={`h-[24em] w-full rounded-lg border bg-white p-4 md:h-[15em] ${activeIndex === index ? 'border-[2.4px] border-zinc-300' : ''}`}
                 >
                   <div className='mb-4 flex items-center justify-between'>
                     <div className='flex items-center'>
@@ -93,7 +94,7 @@ export default function Depoimentos() {
                         className='mr-4 h-12 w-12 rounded-md'
                       />
                       <div>
-                        <h5 className='font-bold text-gray-900'>{dep.nome}</h5>
+                        <p className='font-bold text-gray-900'>{dep.nome}</p>
                         <span className='text-sm font-normal text-blue-700'>
                           {dep.usuario}
                         </span>
@@ -109,7 +110,7 @@ export default function Depoimentos() {
                       </a>
                       <a href={dep.site} className='text-gray-400 hover:text-blue-700'>
                         <span className='sr-only'>Site</span>
-                        <FaGithub className='h-6 w-6' />
+                        <FaGlobe className='h-6 w-6' />
                       </a>
                     </div>
                   </div>
