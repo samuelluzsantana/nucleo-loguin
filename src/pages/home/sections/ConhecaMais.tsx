@@ -34,7 +34,7 @@ export default function ConhecaMais() {
             </div>
           </div>
 
-          <div className='textos-conheca px-8 text-center md:flex md:h-full md:w-[40em] md:flex-col md:justify-center'>
+          <div className='textos-conheca mt-[3em] px-8 text-center md:flex md:h-full md:w-[40em] md:flex-col md:justify-center'>
             <h3 className='text-2xl font-bold md:text-[2rem]'>
               Conheça mais sobre nosso software
             </h3>

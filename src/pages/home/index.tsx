@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet'
 // components
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 // page/sections
 import HomeContainer from './sections/HomeContainer'
 import NossosParceiros from './sections/NossosParceiros'
@@ -45,6 +46,8 @@ export default function Home() {
         <section id='contato'>
           <Contato />
         </section>
+
+        <Footer />
       </main>
     </>
   )
