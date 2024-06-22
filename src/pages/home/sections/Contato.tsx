@@ -2,9 +2,40 @@ import empresaBgMobile from '@/assets/bg/empresa-bg-mobile.png'
 import empresaBgWeb from '@/assets/bg/empresa-bg-web.png'
 import Button from '@/components/Button'
 import { Call, Sms } from 'iconsax-react'
+import { useState } from 'react'
+
+import emailjs from '@emailjs/browser'
 
 export default function Contato() {
   const isMobile = window.innerWidth < 700
+
+  const [nome, setNome] = useState('')
+  const [email, setEmail] = useState('')
+  const [texto, setTexto] = useState('')
+
+  // configurar dps
+  const enviarEmail = () => {
+    // https://www.emailjs.com/
+    emailjs
+      .send(
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
+        {
+          from_name: nome,
+          from_email: email,
+          message: texto,
+        },
+        'YOUR_USER_ID'
+      )
+      .then(
+        result => {
+          alert('Email enviado com sucesso!' + result.text)
+        },
+        error => {
+          console.log('Erro ao enviar email:' + error.text)
+        }
+      )
+  }
 
   return (
     <>
@@ -52,22 +83,31 @@ export default function Contato() {
         <div className='inputs md:w-[40em]'>
           <div className='mt-8 flex flex-col space-y-4 rounded-lg'>
             <input
+              value={nome}
               type='text'
               placeholder='Nome'
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+              onChange={e => setNome(e.target.value)}
             />
             <input
               type='email'
               placeholder='Email'
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
             />
             <textarea
               placeholder='Mensagem'
+              value={texto}
+              onChange={e => setTexto(e.target.value)}
               className='h-40 w-full resize-none rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
             ></textarea>
           </div>
+
           <div className='button-confira mt-[2em]'>
-            <Button>Enviar Mensagem</Button>
+            <Button disabled onClick={enviarEmail}>
+              Enviar Mensagem
+            </Button>
           </div>
         </div>
       </div>

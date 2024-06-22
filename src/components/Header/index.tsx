@@ -14,7 +14,7 @@ const Header = () => {
       route: 'historia',
       label: 'Nossa História',
       path: '/nossa-historia',
-      disabled: true,
+      disabled: false,
     },
     {
       route: 'grafica',

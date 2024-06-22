@@ -6,6 +6,7 @@ import empresa3 from '@/assets/empresas/empresa3.png'
 import empresa4 from '@/assets/empresas/empresa4.png'
 // components
 import Button from '@/components/Button'
+import { scrollToContato } from '@/utils/scrolltoContato'
 
 export default function NossosParceiros() {
   const slides = [
@@ -63,7 +64,7 @@ export default function NossosParceiros() {
           </p>
 
           <div className='mt-8 w-full px-[2em] md:w-[40em]'>
-            <Button>saiba mais</Button>
+            <Button onClick={scrollToContato}>saiba mais</Button>
           </div>
         </div>
       </div>
