@@ -17,12 +17,12 @@ const Header = () => {
       disabled: false,
     },
     {
-      route: 'grafica',
-      label: 'Gráfica Inteligente',
-      path: '/grafica-inteligente',
-      disabled: true,
+      route: 'como-funciona',
+      label: 'Como Funciona',
+      path: '/como-funciona',
+      disabled: false,
     },
-    { route: 'servicos', label: 'Serviços', path: '/servicos', disabled: true },
+    { route: 'Contato', label: 'Contato', path: '/contato', disabled: true },
     {
       route: 'faq',
       label: 'Dúvidas Frequentes',

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 // components
 import Header from '@/components/Header'
 
@@ -13,6 +14,8 @@ import { TbStarFilled } from 'react-icons/tb'
 import Footer from '@/components/Footer'
 
 export default function NossaHistoria() {
+  const pageTitle = 'Nossa Historia'
+
   const icones = [
     {
       icon: <FaMountainSun className='mb-2 text-4xl text-loguin-red' />,
@@ -35,6 +38,9 @@ export default function NossaHistoria() {
 
   return (
     <>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
       <Header />
 
       <img
