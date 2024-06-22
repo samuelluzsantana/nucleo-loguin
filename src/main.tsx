@@ -18,6 +18,7 @@ import Faq from './pages/faq'
 //nossa historia
 import NossaHistoria from './pages/nossa-historia'
 import ComoFunciona from './pages/como-funciona'
+import ContatoPage from './pages/contato'
 
 const root = document.getElementById('root')
 createRoot(root!).render(
@@ -29,6 +30,7 @@ createRoot(root!).render(
           <Route path='/duvidas-frequentes' element={<Faq />} />
           <Route path='/nossa-historia' element={<NossaHistoria />} />
           <Route path='/como-funciona' element={<ComoFunciona />} />
+          <Route path='/contato' element={<ContatoPage />} />
         </Routes>
         <ToastContainer />
       </BrowserRouter>

@@ -22,7 +22,7 @@ const Header = () => {
       path: '/como-funciona',
       disabled: false,
     },
-    { route: 'Contato', label: 'Contato', path: '/contato', disabled: true },
+    { route: 'Contato', label: 'Contato', path: '/contato', disabled: false },
     {
       route: 'faq',
       label: 'Dúvidas Frequentes',
