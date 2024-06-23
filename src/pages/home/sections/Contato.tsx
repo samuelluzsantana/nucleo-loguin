@@ -4,8 +4,6 @@ import Button from '@/components/Button'
 import { Call, Sms } from 'iconsax-react'
 import { useState } from 'react'
 
-import emailjs from '@emailjs/browser'
-
 export default function Contato() {
   const isMobile = window.innerWidth < 700
 
@@ -13,29 +11,8 @@ export default function Contato() {
   const [email, setEmail] = useState('')
   const [texto, setTexto] = useState('')
 
-  // configurar dps
-  const enviarEmail = () => {
-    // https://www.emailjs.com/
-    emailjs
-      .send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          from_name: nome,
-          from_email: email,
-          message: texto,
-        },
-        'YOUR_USER_ID'
-      )
-      .then(
-        result => {
-          alert('Email enviado com sucesso!' + result.text)
-        },
-        error => {
-          console.log('Erro ao enviar email:' + error.text)
-        }
-      )
-  }
+  const emailBody = `Nome: ${nome}\nEmail: ${email}\n\nMensagem: ${texto}`
+  const emailLink = `mailto:contato@nucleologuin.com.br?subject=Contato%20do%20site&body=${encodeURIComponent(emailBody)}`
 
   return (
     <>
@@ -105,9 +82,9 @@ export default function Contato() {
           </div>
 
           <div className='button-confira mt-[2em]'>
-            <Button disabled onClick={enviarEmail}>
-              Enviar Mensagem
-            </Button>
+            <a href={emailLink} target='_black'>
+              <Button>Enviar Mensagem</Button>
+            </a>
           </div>
         </div>
       </div>

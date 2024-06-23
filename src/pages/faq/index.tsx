@@ -89,13 +89,13 @@ export default function Faq() {
           <div className='texto-assests px-8'>
             <div className='texto text-center text-loguin-blue'>
               <h1 className='mt-4 text-3xl font-semibold'>Ainda com duvida?</h1>
-              <p className='text-1xl'>
+              <p className='text-1xl md:mt-2 md:px-[15em] md:text-[1.2rem]'>
                 Não hesite em entrar em contato conosco. Nossa equipe terá o prazer de
                 esclarecer todas as suas dúvidas e fornecer o suporte necessário. Estamos
                 aqui para ajudar!
               </p>
 
-              <div className='button-confira my-[2em]'>
+              <div className='button-confira my-[2em] md:px-[25em]'>
                 <Button>Enviar Mensagem</Button>
               </div>
             </div>

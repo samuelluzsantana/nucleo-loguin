@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet'
 
 import Background from '@/assets/bg/3690578.png'
-import emailjs from '@emailjs/browser'
 
 // components
 import Footer from '@/components/Footer'
@@ -19,29 +18,9 @@ export default function ContatoPage() {
   const [email, setEmail] = useState('')
   const [texto, setTexto] = useState('')
 
-  // configurar dps
-  const enviarEmail = () => {
-    // https://www.emailjs.com/
-    emailjs
-      .send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        {
-          from_name: nome,
-          from_email: email,
-          message: texto,
-        },
-        'YOUR_USER_ID'
-      )
-      .then(
-        result => {
-          alert('Email enviado com sucesso!' + result.text)
-        },
-        error => {
-          console.log('Erro ao enviar email:' + error.text)
-        }
-      )
-  }
+  const emailBody = `Nome: ${nome}\nEmail: ${email}\n\nMensagem: ${texto}`
+  const emailLink = `mailto:contato@nucleologuin.com.br?subject=Contato%20do%20site&body=${encodeURIComponent(emailBody)}`
+
   return (
     <>
       <Helmet>
@@ -63,7 +42,7 @@ export default function ContatoPage() {
           <p className='text-1xl mt-4 md:text-3xl'>Fale Conosco</p>
         </div>
 
-        <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
+        <div className='o-sistema mt-[12em] flex w-full flex-col items-center px-16 text-loguin-blue md:mb-[10em] md:mt-[25em]'>
           <div className='texto md:w-[30em]'>
             <div className='text-fale-conosoco flex flex-col items-center pt-[10em] md:pt-0'>
               <h3 className='text-3xl font-bold'>Fale Conosco</h3>
@@ -97,7 +76,7 @@ export default function ContatoPage() {
             </div>
           </div>
 
-          <div className='inputs md:w-[40em]'>
+          <div className='inputs w-full md:w-[40em]'>
             <div className='mt-8 flex flex-col space-y-4 rounded-lg'>
               <input
                 value={nome}
@@ -122,9 +101,9 @@ export default function ContatoPage() {
             </div>
 
             <div className='button-confira my-[2em]'>
-              <Button disabled onClick={enviarEmail}>
-                Enviar Mensagem
-              </Button>
+              <a href={emailLink} target='_black'>
+                <Button>Enviar Mensagem</Button>
+              </a>
             </div>
           </div>
         </div>
