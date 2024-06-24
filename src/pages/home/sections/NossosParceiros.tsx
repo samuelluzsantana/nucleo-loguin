@@ -26,33 +26,15 @@ export default function NossosParceiros() {
 
   return (
     <>
-      <div className='relative bottom-[10em] z-10 flex h-[45em] bg-white'>
+      <div className='relative bottom-[10em] z-10 flex h-[30em] bg-white'>
         <div className='nossos-parceiros-header mt-[10em] flex w-full flex-col items-center'>
           <div className='text-nossos flex flex-col items-center'>
-            <h3 className='text-3xl font-bold text-loguin-blue'>Nossos Parceiros</h3>
-            <p className='text-center font-normal'>
+            <h3 className='text-3xl font-bold text-loguin-blue md:text-5xl'>
+              Nossos Parceiros
+            </h3>
+            <p className='text-center font-normal md:mt-2 md:text-2xl'>
               Quem confia, cresce junto: a força dos nossos parceiros
             </p>
-          </div>
-
-          <div className='empresas-carrosel w-full'>
-            <Slider
-              width={'150px'}
-              duration={40}
-              pauseOnHover={true}
-              blurBorders={false}
-              blurBoderColor={'#fff'}
-            >
-              {duplicatedSlides.map((slide, index) => (
-                <Slider.Slide key={index}>
-                  <img
-                    src={slide.imagem}
-                    alt={slide.alt}
-                    className='h-48 w-48 object-contain'
-                  />
-                </Slider.Slide>
-              ))}
-            </Slider>
           </div>
 
           <p className='mt-4 w-[20em] text-justify md:w-[40em]'>
