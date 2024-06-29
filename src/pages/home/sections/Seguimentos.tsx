@@ -20,8 +20,8 @@ export default function Seguimentos() {
             </p>
 
             <p className='text text-1xl mx-8 mt-4 hidden text-center font-normal md:mt-8 md:block md:w-[40rem] md:text-[1.2rem]'>
-              Independentemente do tamanho ou segmento, nosso sistema é adaptável,
-              garantindo resultados excelentes para gráficas de todos os perfis.
+              Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando
+              sempre os melhores resultados.
             </p>
           </div>
 
@@ -33,9 +33,9 @@ export default function Seguimentos() {
             />
           </div>
 
-          <p className='text text-1xl z-[2] mx-8 mt-4 text-center font-normal md:relative md:hidden'>
-            Independentemente do tamanho ou segmento, nosso sistema é adaptável,
-            garantindo resultados excelentes para gráficas de todos os perfis.
+          <p className='text text-1xl z-[2] mx-8 mt-4 text-left font-normal md:relative md:hidden'>
+            Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando sempre
+            os melhores resultados.
           </p>
         </div>
       </div>

@@ -18,28 +18,40 @@ export default function Faq() {
     {
       pergunta: 'Todos os softwares são iguais?',
       resposta:
-        'Não, os softwares podem variar significativamente em termos de funcionalidades, integrações, suporte e desempenho. Softwares de primeira linha geralmente oferecem mais recursos avançados e suporte técnico especializado.',
+        'Há pelo menos 3 categorias de softwares. Os mais avançados são os ERPs com funções totalmente integradas entre si, e operam sem perder informações, com muita segurança. Todas as atividades são permitidas por senhas. Etapas ‘fechadas’ só podem ser reabertas com autorização superior.',
     },
     {
       pergunta:
         'O que os softwares de primeira linha oferecem de vantagem sobre os demais?',
       resposta:
-        'Softwares de primeira linha geralmente oferecem melhor suporte técnico, atualizações regulares, integrações avançadas com outros sistemas e funcionalidades personalizáveis que atendem melhor às necessidades específicas do usuário.',
+        'Informações em tempo real para clientes externos e internos. Agilidade na consulta. Dados seguros, precisos!',
     },
+    {
+      pergunta: 'Posso diversificar minha produção com o GI_Gráfica Inteligente?',
+      resposta:
+        'O GI é um ERP de primeira linha e de amplo espectro. Atende a todos os segmentos e processos da indústria gráfica. Aplica-se a gráficas de qualquer porte. Se uma empresa decide investir em novo segmento, qualquer que seja, o GI atende. Se a empresa decide mudar de segmento não precisa mudar de software.',
+    },
+
     {
       pergunta: 'O GI me avisa sobre os materiais e insumos a serem usados numa OP?',
       resposta:
-        'Sim, um software de Gestão Integrada (GI) pode fornecer alertas e informações detalhadas sobre os materiais e insumos necessários para ordens de produção (OP), facilitando o controle e a gestão de estoques.',
+        'Sim, não há perigo de iniciar a produção faltando algum dos componentes que integrem a OP. O orçamento detalhado transforma-se na OP, sem valores (preços e custos) com todas as informações registradas: características do impresso, montagem mais adequada, número de chapas, quantidades de tintas, entre tantas.',
     },
+
     {
       pergunta: 'Consigo criar padrões de produtos?',
       resposta:
-        'Sim, muitos softwares permitem a criação e gerenciamento de padrões de produtos para garantir consistência na produção e facilitar o controle de qualidade.',
+        'O GI dispõe de um gerador de EPs – Engenharia de Produto ou Especificação de Produto, automático que registra a melhor forma de produzir. Para iniciar a produção basta informar as quantidades solicitadas pelo cliente.',
     },
     {
       pergunta: 'O GI ‘conversa’ com outros sistemas?',
       resposta:
-        'Sim, softwares de GI são projetados para integração com outros sistemas, facilitando a troca de informações entre diferentes departamentos e sistemas dentro de uma organização.',
+        'Sim. ‘Conversa’ com sistemas bancários – envio, remessa e boletos; sistemas contábeis; emissor de NF eletrônica. ',
+    },
+    {
+      pergunta: 'Posso aumentar meu faturamento com ajuda do GI?',
+      resposta:
+        'O GI ajuda, sim. Facilitando a elaboração e aprovação de orçamentos, gerenciando o PCP para cumprir prazos de entrega, monitorando a fabricação para detectar eventuais desvios ou impropriedades na produção.',
     },
   ]
 

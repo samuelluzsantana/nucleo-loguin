@@ -1,5 +1,7 @@
 import { Call, Sms } from 'iconsax-react'
-import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaMapMarkerAlt } from 'react-icons/fa'
+
+import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import Logo from '../Logo'
 
 export default function Footer() {
@@ -11,7 +13,6 @@ export default function Footer() {
   ]
 
   const socialIcons = [
-    { icon: <FaTiktok />, href: '#tiktok' },
     { icon: <FaInstagram />, href: '#instagram' },
     { icon: <FaFacebook />, href: '#facebook' },
     { icon: <FaLinkedin />, href: '#linkedin' },
@@ -71,6 +72,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={social.href}
+                target='_blank'
                 className='text-2xl text-white hover:text-loguin-red'
               >
                 {social.icon}
@@ -79,10 +81,28 @@ export default function Footer() {
           </div>
         </div>
         <div className='my-8 md:hidden'>
-          <p className='w-full text-center text-sm text-white text-opacity-50'>
+          <div className='flex items-center justify-center text-sm text-white text-opacity-90'>
+            <FaMapMarkerAlt className='mr-2' /> {/* Adiciona o ícone de mapa */}
+            <p>
+              Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP 01310-200
+            </p>
+          </div>
+          <p className='mt-4 w-full text-center text-sm text-white text-opacity-40'>
             Nucleo Loguin - Todos os Direitos reservados
           </p>
         </div>
+      </div>
+
+      <div className='hidden bg-loguin-blue pb-8 pr-16 text-right text-sm md:block'>
+        <div className='flex cursor-pointer items-center justify-end text-white text-opacity-90 hover:text-loguin-red'>
+          <FaMapMarkerAlt className='mr-2' /> {/* Adiciona o ícone de mapa */}
+          <p>
+            Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP 01310-200
+          </p>
+        </div>
+        <p className='mt-4 w-full text-right text-white text-opacity-40'>
+          Nucleo Loguin - Todos os Direitos reservados
+        </p>
       </div>
     </footer>
   )

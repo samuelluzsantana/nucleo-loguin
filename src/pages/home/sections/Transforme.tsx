@@ -5,7 +5,7 @@ export default function Transforme() {
 
   return (
     <>
-      <div className='transforme z-10 h-[55em] px-8 text-loguin-blue md:px-[5em]'>
+      <div className='transforme z-10 mt-[8em] h-[55em] px-8 text-loguin-blue md:px-[5em]'>
         <div className='text-transforme-sua-grafica mt-[10em] w-full items-center text-center md:w-full md:text-left'>
           <h3 className='text-2xl font-bold md:text-3xl'>
             Como o Sistema Gráfica Inteligente Eleva o Patamar das Gráficas Expressivas

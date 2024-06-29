@@ -1,7 +1,7 @@
 import empresaBgMobile from '@/assets/bg/empresa-bg-mobile.png'
 import empresaBgWeb from '@/assets/bg/empresa-bg-web.png'
 import Button from '@/components/Button'
-import { Call, Sms } from 'iconsax-react'
+import { Call, Sms, Whatsapp } from 'iconsax-react'
 import { useState } from 'react'
 
 export default function Contato() {
@@ -10,6 +10,7 @@ export default function Contato() {
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [texto, setTexto] = useState('')
+  const [assunto, setAssunto] = useState('')
 
   const emailBody = `Nome: ${nome}\nEmail: ${email}\n\nMensagem: ${texto}`
   const emailLink = `mailto:contato@nucleologuin.com.br?subject=Contato%20do%20site&body=${encodeURIComponent(emailBody)}`
@@ -28,13 +29,12 @@ export default function Contato() {
           <div className='text-fale-conosoco flex flex-col items-center pt-[10em] text-white md:pt-0'>
             <h3 className='text-3xl font-bold'>Fale Conosco</h3>
             <p className='mt-4 text-justify font-normal'>
-              Estamos prontos para responder às suas dúvidas e fornecer informações
-              detalhadas sobre o Sistema GI_Gráfica Inteligente. Utilize o formulário
-              abaixo ou entre em contato diretamente pelos seguintes meios:
+              Se você quer conhecer mais sobre o nosso software ou tem alguma dúvida,
+              entre em contato através de um dos nossos canais.
             </p>
           </div>
 
-          <div className='icons md: mt-8 flex w-full flex-col items-start text-white md:flex-row md:items-center'>
+          <div className='icons md: mt-8 flex w-full flex-col items-start text-white md:items-center'>
             <div className='telefone flex w-full items-center hover:text-loguin-red'>
               <Call size='32' variant='Bold' />
               <a
@@ -45,13 +45,23 @@ export default function Contato() {
               </a>
             </div>
 
-            <div className='email mt-4 flex w-full items-center hover:text-loguin-red md:mt-0'>
+            <div className='email mt-4 flex w-full items-center hover:text-loguin-red'>
               <Sms size='32' variant='Bold' />
               <a
                 href='mailto:contato@nucleologuin.com.br'
                 className='ml-4 font-medium transition-colors duration-300'
               >
                 contato@nucleologuin.com.br
+              </a>
+            </div>
+
+            <div className='email mt-4 flex w-full items-center hover:text-loguin-red'>
+              <Whatsapp size='32' variant='Bold' />
+              <a
+                href='mailto:contato@nucleologuin.com.br'
+                className='ml-4 font-medium transition-colors duration-300'
+              >
+                Contato zap
               </a>
             </div>
           </div>
@@ -73,6 +83,15 @@ export default function Contato() {
               onChange={e => setEmail(e.target.value)}
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
             />
+
+            <input
+              type='text'
+              placeholder='Assunto'
+              value={assunto}
+              onChange={e => setAssunto(e.target.value)}
+              className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+            />
+
             <textarea
               placeholder='Mensagem'
               value={texto}

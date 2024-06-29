@@ -2,7 +2,14 @@ import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 // assets/icons
-import { ReceiptDisscount, MoneyRecive, TruckTick, Box } from 'iconsax-react'
+import {
+  ReceiptDiscount,
+  MoneyRecive,
+  MoneySend,
+  DocumentText,
+  ArchiveTick,
+  ClipboardText,
+} from 'iconsax-react'
 // styles
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -19,49 +26,80 @@ export default function SwipperCards() {
 
   const conteudo = [
     {
-      titulo: 'Venda com Boa Margem',
-      icone: <ReceiptDisscount size={iconSize} variant='Bold' />,
+      titulo: 'COMERCIAL',
+      icone: <ReceiptDiscount size={iconSize} variant='Bold' />,
       descricao: [
-        'Acompanhamento diário do lucro líquido',
-        'Visão completa dos custos e preços de cada pedido',
-        'Definição estratégica de preços para maximizar a lucratividade',
+        'Orçamento',
+        'Engenharia de Produto',
+        'Pós-Calculo',
+        'Proposta Comercial',
+        'Vendas Pendentes',
+        'Políticas de Preços',
+        'Ação da Concorrência',
       ],
     },
     {
-      titulo: 'Produção com Baixo Custo',
+      titulo: 'FABRICAÇÃO',
       icone: <MoneyRecive size={iconSize} variant='Bold' />,
       descricao: [
-        'Pós-Cálculo avançado para identificar gargalos e otimizar processos.',
-        'Controle preciso de materiais e insumos.',
-        'Redução drástica do desperdício.',
-      ],
-    },
-
-    {
-      titulo: 'Entregas no Prazo',
-      icone: <TruckTick size={iconSize} variant='Bold' />,
-      descricao: [
-        'Controle total de vendas, produção e expedição',
-        'Agendamento inteligente de tarefas e prazos.',
-        'Visão em tempo real do status de cada pedido',
+        'Empenho de materiais',
+        'Programação por OP',
+        'Programação por Máquina',
+        'Planejamento PEPS',
+        'Planejamento de Entregas',
+        'Apontamento Eletrônico',
+        'Inspeção de MP',
       ],
     },
     {
-      titulo: 'Fim do Desperdício',
-      icone: <Box size={iconSize} variant='Bold' />,
+      titulo: 'SUPRIMENTOS',
+      icone: <ArchiveTick size={iconSize} variant='Bold' />,
       descricao: [
-        'Combate ao desperdício na fonte com ferramentas avançadas.',
-        'Controle rigoroso de materiais e insumos.',
-        'Otimização dos processos de produção.',
+        'Estoque em Elaboração',
+        'Cotação de Preços',
+        'Quarentena',
+        'Estoque de PA e MP',
+        'Kardex',
+        'Controle de Lotes',
+        'Recebimento Monitorado',
       ],
     },
     {
-      titulo: 'Venda com Boa Margem',
-      icone: <ReceiptDisscount size={iconSize} variant='Bold' />,
+      titulo: 'FINANCEIRO',
+      icone: <MoneySend size={iconSize} variant='Bold' />,
       descricao: [
-        'Acompanhamento diário do lucro líquido',
-        'Visão completa dos custos e preços de cada pedido',
-        'Definição estratégica de preços para maximizar a lucratividade',
+        'Budget',
+        'CNBAs Envio/Retorno',
+        'Fluxo de Caixa',
+        'Conta Corrente',
+        'Boleto',
+        'Contas a Pagas',
+        'Contas a Receber',
+      ],
+    },
+    {
+      titulo: 'FATURAMENTO',
+      icone: <DocumentText size={iconSize} variant='Bold' />,
+      descricao: [
+        'Nota Fiscal Eletrônica',
+        'Estoque de PA',
+        'Comissões de Venda',
+        'Logística de Entregas',
+        'Pré-Nota',
+        'Baixa de Estoques PA',
+      ],
+    },
+    {
+      titulo: 'ACESSÓRIOS',
+      icone: <ClipboardText size={iconSize} variant='Bold' />,
+      descricao: [
+        'Gestão Indicadores',
+        'Integrador Contábil',
+        'Infoweb de PA',
+        'Controle Web Produção',
+        'Logística Web Entregas',
+        'RKW Online',
+        'DRE',
       ],
     },
   ]
@@ -78,7 +116,7 @@ export default function SwipperCards() {
       >
         {conteudo.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className='card h-[25em] w-full rounded-lg border bg-white p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>
+            <div className='card h-[30em] w-full rounded-lg border bg-white p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>
               <div className='icon flex h-[4em] w-[4em] items-center justify-center rounded-[1em] bg-loguin-red text-white'>
                 {item.icone}
               </div>

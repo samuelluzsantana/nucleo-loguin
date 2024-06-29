@@ -11,6 +11,8 @@ import Segmentos from './sections/Segmentos'
 import Depoimentos from './sections/Depoimentos'
 import ConhecaMais from './sections/ConhecaMais'
 import Contato from './sections/Contato'
+import Visao360 from './sections/Visao360'
+import Implantar from '../como-funciona/Implantar'
 
 export default function Home() {
   const pageTitle = 'Núcleo Loguin'
@@ -31,12 +33,22 @@ export default function Home() {
         <section id='seguimentos'>
           <Seguimentos />
         </section>
-        <section id='transforme-sua-grafica'>
-          <Transforme />
+        <section id='visao-360'>
+          <Visao360 />
         </section>
+
+        <section id='porque-implantar'>
+          <Implantar />
+        </section>
+
         <section id='segmentos-graficos'>
           <Segmentos />
         </section>
+
+        <section id='transforme-sua-grafica'>
+          <Transforme />
+        </section>
+
         <section id='depoimentos'>
           <Depoimentos />
         </section>

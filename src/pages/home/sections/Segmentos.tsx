@@ -7,7 +7,7 @@ export default function Segmentos() {
     'Embalagens',
     'Rótulos e Etiquetas',
     'Impressos promocionais',
-    'Livros, Revistas',
+    'Livros e Revistas',
     'Cadernos e Apostilas',
     'Envelopes',
     'Comunicação Visual',
@@ -15,7 +15,7 @@ export default function Segmentos() {
 
   return (
     <>
-      <div className='h-[55em] bg-loguin-red px-8 text-white md:h-[35em] md:px-[5em]'>
+      <div className='mt-[12em] h-[55em] bg-loguin-red px-8 text-white md:h-[35em] md:px-[5em]'>
         <div className='foto flex flex-col justify-evenly md:flex-row'>
           <div className='mt-[-4em] flex content-center items-center md:mr-[3em] md:mt-[5em] md:h-full'>
             <img src={mulher} className='' alt='Mulher trabalhando em uma gráfica' />

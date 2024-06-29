@@ -54,8 +54,10 @@ export default function HomeContainer() {
             </h1>
 
             <h2 className='mt-8 w-[21em] text-sm font-normal md:w-[30em] md:text-xl'>
-              otimize todos os processos da sua gráfica e estabeleça conexões inteligentes
-              e intuitivas entre os setores.
+              Um sistema moldado conforme suas necessidades, que otimiza todos os
+              processos da sua gráfica e conecta de forma inteligente e intuitiva o setor
+              comercial, a produção, o controle de suprimentos, o financeiro e o
+              faturamento.
             </h2>
           </div>
 

@@ -63,7 +63,7 @@ export default function Depoimentos() {
   return (
     <>
       <div className='h-[40em] bg-white px-8 text-loguin-blue md:h-[35em] md:px-[12em]'>
-        <div className='titulo-depoimentos mt-[10em] text-center md:text-left'>
+        <div className='titulo-depoimentos text-center md:text-left'>
           <h3 className='text-2xl font-bold md:text-3xl'>Depoimentos</h3>
           <p className='mt-2 text-sm font-normal md:text-[1.5rem]'>
             A força dos nossos parceiros, quem usa recomenda.
