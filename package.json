@@ -17,6 +17,7 @@
     "emailjs": "^4.0.3",
     "framer-motion": "^11.2.9",
     "iconsax-react": "^0.0.8",
+    "mailjs": "^0.1.18",
     "nodemailer": "^6.9.14",
     "primereact": "^10.6.5",
     "radix-ui": "^1.0.1",

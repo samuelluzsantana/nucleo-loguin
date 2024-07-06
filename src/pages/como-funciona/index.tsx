@@ -126,9 +126,9 @@ export default function ComoFunciona() {
             </p>
           </div>
 
-          <Implantar />
+          <Implantar titulo='Por que implantar o sistema gi_gráfica inteligente?' />
 
-          <div className='imagens mt-8 w-full bg-loguin-blue'>
+          <div className='imagens mt-4 w-full bg-loguin-blue'>
             <div className='grid w-full grid-cols-1 md:grid-cols-2'>
               <div className='h-[35em] w-full bg-red-900'>
                 <img
@@ -182,9 +182,15 @@ export default function ComoFunciona() {
             </div>
           </div>
 
-          <div className='nossos-recurso mt-[12em] w-full px-16 text-loguin-blue'>
-            <p className='mt-4 text-3xl font-medium md:mt-[5em] md:text-4xl'>
-              Por que implantar o sistema gi_gráfica inteligente?
+          <div className='nossos-recurso w-full px-16 text-loguin-blue'>
+            <p className='mt-[4em] text-3xl font-medium md:mt-[5em] md:text-4xl'>
+              NOSSOS RECURSOS
+            </p>
+
+            <p className='mt-2 text-lg'>
+              {' '}
+              Confira todos os recursos do
+              <span className='ml-2 font-bold'>GI_Gráfica Inteligente</span>
             </p>
 
             <div className='icones2'>
@@ -211,7 +217,7 @@ export default function ComoFunciona() {
             </div>
           </div>
 
-          <div className='conheca-etapas mt-[4em] px-8 text-loguin-blue'>
+          <div className='conheca-etapas mt-[4em] h-[45em] px-8 text-loguin-blue md:h-[35em]'>
             <div className='my-8 grid w-full grid-cols-1 gap-4 md:grid-cols-2'>
               <div className='conheca-as-etapas'>
                 <p className='text-3xl font-semibold'>

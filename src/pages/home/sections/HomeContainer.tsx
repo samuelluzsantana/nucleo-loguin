@@ -36,7 +36,7 @@ export default function HomeContainer() {
             <h1 className='flex w-[7.5em] flex-col justify-start text-[2.5em] font-semibold leading-[1] md:w-[9.5em] md:text-6xl'>
               <div className='flex flex-col md:flex-row'>
                 <span className='mr-0 md:mr-[1rem]'>o mais</span>
-                <span>
+                <span className='text-white'>
                   <FlipWords words={words} /> <br />
                 </span>
               </div>

@@ -108,7 +108,9 @@ export default function Faq() {
               </p>
 
               <div className='button-confira my-[2em] md:px-[25em]'>
-                <Button>Enviar Mensagem</Button>
+                <a href='/contato' rel='noopener noreferrer'>
+                  <Button>Enviar Mensagem</Button>
+                </a>
               </div>
             </div>
           </div>

@@ -1,65 +1,31 @@
-- clicar no x e o botão fazer uma animação de fechar
+### Site Comparação
 
+#### 1. Início (Home Menus)
 
+[x] Verificar e corrigir o efeito de troca das palavras no texto "O MAIS COMPLETO SISTEMA INTEGRADO DE GESTÃO PARA GRÁFICAS". Caso não seja possível arrumar, remover o efeito e deixar o texto fixo.
+[x] Adicionar uma imagem do sistema novo abaixo ou em conjunto com o texto mencionado.
 
+- Confirmar a presença do banner rotativo na home. Caso não exista, decidir se será adicionado ou não, e definir onde os textos correspondentes ficarão.
 
+#### 2. Nossa História (quem somos)
 
+[x] Corrigir o funcionamento dos menus na seção de baixo.
 
-Site Coparação
-=====================
+#### 3. Como Funciona
 
-1-Início(Home Menus)
-==================
--Ví que os nomes dos menus estão com nomes e ordens diferentes...mas ok
+[x] Corrigir o texto da página para "NOSSOS RECURSOS: Confira todos os recursos do GI_Gráfica Inteligente".
+[x] Remover o texto duplicado "Por que implantar o sistema gi_gráfica inteligente?".
 
--Texto incorreto/bug:
-tem algum bug no efeito de troca das palavras
-não aparece o texto do efeito que ficaria trocando...
-verificar se não conseguir arrumar tirar o efeito e deixar o texto igual.
+[x] Ajustar a seção "Ainda com dúvida?" para definir a ação desejada (chamar mensagem, WhatsApp, ou ambos).
+[x] Garantir que todos os menus estejam funcionando corretamente.
 
-texto correto:
-O MAIS COMPLETO SISTEMA INTEGRADO DE GESTÃO PARA GRÁFICAS
+#### 4. Contato
 
-colocar uma imagem do sistema novo abaixo ou em conjunto com esse texto.
+[x] Corrigir o telefone para incluir o código do país: +55 11 2626-4126.
+[x] Ajustar o link de contato do WhatsApp para abrir a aplicação correta, não o e-mail.
+[x] Adicionar o endereço da empresa conforme solicitado: "Av. Paulista, 1636 - Conjunto 1504 - São Paulo - SP - Brasil - CEP 01310-200".
 
-Home/Início
-*não tem o banner rotativo da home(inicial) não terá? e os textos, onde ficaram esses textos?
+#### 5. Rodapé Menus
 
-2-Nossa História (quem somos)
-====================================
-menu's de baixo não funcionam(ajustar)
-
-3-Como funciona
-====================================
-Texto incorreto na página
-
-correto
-NOSSOS RECURSOS
-Confira todos os recursos do GI_Gráfica Inteligente
-
--Texto incorreto duplicado
-Por que implantar o sistema gi_gráfica inteligente?
-
-PERGUNTAS FREQUENTES
-ví que colocou em um menu separado. 
-Ok
-
--Ainda com duvida?
-A mensagem não está chamando...
-qual será a idéia aqui? chamar mensagem ou zap? ou ambos?
-Ajustar todos os menus precisam estar funcionando.  
-
-3-Contato
-==========================
--Arrumar telefone está sem o +55 no número
-+55 11 2626-4126
--link contato zap está abrindo o e-mail.
- 
-
-Rodapé Menus
-============================
-Coloar o contato zap junto com o telefone e email.
-Ajustar todos os link's precisam estar funcionando.
-
-adicionar enviar email
-=====
+[x] Adicionar o contato do WhatsApp junto com o telefone e e-mail.
+[x] Garantir que todos os links no rodapé estejam funcionando corretamente.

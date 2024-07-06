@@ -8,7 +8,7 @@ export default function ConhecaMais() {
 
   return (
     <>
-      <div className='conheca-mais-software z-10 h-[60em] bg-loguin-blue pt-[4em] text-white md:h-[28em] md:pt-0'>
+      <div className='conheca-mais-software z-10 h-[60em] bg-loguin-blue pt-[4em] text-white md:h-[40em] md:pt-0'>
         <div className='flex h-full w-full flex-col md:flex-row md:justify-evenly md:px-8'>
           <div className='imagem flex w-full flex-col md:h-full md:w-[55em] md:flex-row-reverse'>
             <div className='img-assets flex items-end md:w-[3em]'>
@@ -34,7 +34,7 @@ export default function ConhecaMais() {
             </div>
           </div>
 
-          <div className='textos-conheca mt-[3em] px-8 text-center md:flex md:h-full md:w-[40em] md:flex-col md:justify-center'>
+          <div className='textos-conheca px-8 text-center md:flex md:h-full md:w-[40em] md:flex-col md:justify-center'>
             <h3 className='text-2xl font-bold md:text-[2rem]'>
               Conheça mais sobre nosso software
             </h3>

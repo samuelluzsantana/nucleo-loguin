@@ -36,19 +36,15 @@ export default function Home() {
         <section id='visao-360'>
           <Visao360 />
         </section>
-
         <section id='porque-implantar'>
-          <Implantar />
+          <Implantar titulo='por que gráficas de expressão evoluíram com o sistema gi_gráfica inteligente?' />
         </section>
-
         <section id='segmentos-graficos'>
           <Segmentos />
         </section>
-
         <section id='transforme-sua-grafica'>
           <Transforme />
         </section>
-
         <section id='depoimentos'>
           <Depoimentos />
         </section>
@@ -58,7 +54,6 @@ export default function Home() {
         <section id='contato'>
           <Contato />
         </section>
-
         <Footer />
       </main>
     </>

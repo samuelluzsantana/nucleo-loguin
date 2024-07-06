@@ -1,39 +1,30 @@
-import { Call, Sms } from 'iconsax-react'
+import { Call, Sms, Whatsapp } from 'iconsax-react'
+
 import { FaMapMarkerAlt } from 'react-icons/fa'
 
 import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+
 import Logo from '../Logo'
 
 export default function Footer() {
-  const links = [
-    { name: 'Política de Privacidade', href: '#privacy' },
-    { name: 'Legal', href: '#legal' },
-    { name: 'Suporte', href: '#support' },
-    { name: 'Contato', href: '#contact' },
-  ]
-
   const socialIcons = [
-    { icon: <FaInstagram />, href: '#instagram' },
-    { icon: <FaFacebook />, href: '#facebook' },
-    { icon: <FaLinkedin />, href: '#linkedin' },
-    { icon: <FaWhatsapp />, href: '#whatsapp' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/grafica_inteligente/' },
+    {
+      icon: <FaFacebook />,
+      href: 'https://www.facebook.com/people/GI-Gr%C3%A1fica-Inteligente/100068617605688/',
+    },
+    { icon: <FaLinkedin />, href: 'https://www.linkedin.com/company/nucleologuin' },
+    {
+      icon: <FaWhatsapp />,
+      href: 'https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*',
+    },
   ]
 
   return (
     <footer>
       <div className='flex h-[32em] flex-col bg-loguin-blue px-8 pt-8 md:h-[15em] md:flex-row-reverse md:justify-between'>
         <div className='flex h-full flex-row-reverse md:flex-row'>
-          <div className='links mt-8 w-full text-right md:flex'>
-            <ul className='gap-4 md:mr-12 md:flex'>
-              {links.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className='text-white hover:underline'>
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className='links mt-8 w-full text-right md:flex'></div>
           <div className='fale-conosco'>
             <div className='icons mt-8 flex w-[15em] flex-col items-start text-white md:mr-12 md:flex-row md:items-center'>
               <div className='flex flex-col'>
@@ -45,7 +36,7 @@ export default function Footer() {
                     href='tel:1126264126'
                     className='ml-2 text-[1rem] transition-colors duration-300'
                   >
-                    11 2626-4126
+                    +55 11 2626-4126
                   </a>
                 </div>
 
@@ -56,6 +47,16 @@ export default function Footer() {
                     className='ml-2 text-[1rem] transition-colors duration-300'
                   >
                     contato@nucleologuin.com.br
+                  </a>
+                </div>
+
+                <div className='email mt-4 flex w-full items-center hover:text-loguin-red md:mt-2'>
+                  <Whatsapp size='22' variant='Bold' />
+                  <a
+                    href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
+                    className='ml-2 text-[1rem] transition-colors duration-300'
+                  >
+                    +55 11 995106712
                   </a>
                 </div>
               </div>
@@ -82,8 +83,7 @@ export default function Footer() {
         </div>
         <div className='my-8 md:hidden'>
           <div className='flex items-center justify-center text-sm text-white text-opacity-90'>
-            <FaMapMarkerAlt className='mr-2' /> {/* Adiciona o ícone de mapa */}
-            <p>
+            <p className='text-center'>
               Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP 01310-200
             </p>
           </div>

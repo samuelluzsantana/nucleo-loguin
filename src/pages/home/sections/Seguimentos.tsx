@@ -1,4 +1,5 @@
 import pc1 from '@/assets/pc1.png'
+import Button from '@/components/Button'
 
 export default function Seguimentos() {
   // const isMobile = window.innerWidth < 700
@@ -23,6 +24,12 @@ export default function Seguimentos() {
               Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando
               sempre os melhores resultados.
             </p>
+
+            <div className='mt-8 hidden w-full px-24 md:block'>
+              <a href='/como-funciona' rel='noopener noreferrer'>
+                <Button>saiba mais</Button>
+              </a>
+            </div>
           </div>
 
           <div className='imagem-pc z-[1] flex md:relative md:right-12 md:top-8'>
@@ -37,6 +44,12 @@ export default function Seguimentos() {
             Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando sempre
             os melhores resultados.
           </p>
+
+          <div className='mt-8 w-full px-8 md:hidden'>
+            <a href='/como-funciona' rel='noopener noreferrer'>
+              <Button>saiba mais</Button>
+            </a>
+          </div>
         </div>
       </div>
     </>

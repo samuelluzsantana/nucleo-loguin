@@ -60,7 +60,7 @@ export default function ContatoPage() {
                   href='tel:1126264126'
                   className='ml-4 font-medium transition-colors duration-300'
                 >
-                  11 2626-4126
+                  +55 11 2626-4126
                 </a>
               </div>
 
@@ -77,10 +77,11 @@ export default function ContatoPage() {
               <div className='email mt-4 flex w-full items-center hover:text-loguin-red'>
                 <Whatsapp size='32' variant='Bold' />
                 <a
-                  href='mailto:contato@nucleologuin.com.br'
+                  href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
+                  target='_blank'
                   className='ml-4 font-medium transition-colors duration-300'
                 >
-                  Contato zap
+                  +55 11 995106712
                 </a>
               </div>
             </div>

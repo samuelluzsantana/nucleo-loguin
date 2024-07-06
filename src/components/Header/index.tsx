@@ -11,24 +11,24 @@ const Header = () => {
   const tabs = [
     { route: 'home', label: 'Início', path: '/', disabled: false },
     {
+      route: 'como-funciona',
+      label: 'Como Funciona',
+      path: '/como-funciona',
+      disabled: false,
+    },
+    {
       route: 'historia',
       label: 'Nossa História',
       path: '/nossa-historia',
       disabled: false,
     },
     {
-      route: 'como-funciona',
-      label: 'Como Funciona',
-      path: '/como-funciona',
-      disabled: false,
-    },
-    { route: 'Contato', label: 'Contato', path: '/contato', disabled: false },
-    {
       route: 'faq',
       label: 'Dúvidas Frequentes',
       path: '/duvidas-frequentes',
       disabled: false,
     },
+    { route: 'Contato', label: 'Contato', path: '/contato', disabled: false },
   ]
 
   function onMenuToggle(e: React.MouseEvent<HTMLParagraphElement>) {

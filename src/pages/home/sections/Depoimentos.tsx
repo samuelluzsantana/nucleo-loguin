@@ -10,7 +10,6 @@ import robson from '@/assets/pfp/robson.png'
 import ricardo from '@/assets/pfp/ricardo.png'
 import sidney from '@/assets/pfp/sidney.png'
 // icons
-import { FaGlobe, FaLinkedin } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 
 export default function Depoimentos() {
@@ -84,7 +83,7 @@ export default function Depoimentos() {
             {depoimentos.map((dep, index) => (
               <SwiperSlide key={index} className={`flex w-full items-center`}>
                 <div
-                  className={`h-[24em] w-full rounded-lg border bg-white p-4 md:h-[15em] ${activeIndex === index ? 'border-[2.4px] border-zinc-300' : ''}`}
+                  className={`h-[25em] w-full rounded-lg border bg-white p-4 md:h-[15em] ${activeIndex === index ? 'border-[2.4px] border-zinc-300' : ''}`}
                 >
                   <div className='mb-4 flex items-center justify-between'>
                     <div className='flex items-center'>
@@ -100,21 +99,8 @@ export default function Depoimentos() {
                         </span>
                       </div>
                     </div>
-                    <div className='flex space-x-2'>
-                      <a
-                        href={dep.linkedin}
-                        className='text-gray-400 hover:text-blue-700'
-                      >
-                        <span className='sr-only'>LinkedIn</span>
-                        <FaLinkedin className='h-6 w-6' />
-                      </a>
-                      <a href={dep.site} className='text-gray-400 hover:text-blue-700'>
-                        <span className='sr-only'>Site</span>
-                        <FaGlobe className='h-6 w-6' />
-                      </a>
-                    </div>
                   </div>
-                  <p className='text-gray-600'>{dep.depoimento}</p>
+                  <p className='text-[13px] text-gray-600'>{dep.depoimento}</p>
                 </div>
               </SwiperSlide>
             ))}

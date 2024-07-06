@@ -8,7 +8,7 @@ import {
   MdSettings,
 } from 'react-icons/md'
 
-export default function Implantar() {
+export default function Implantar({ titulo }: { titulo: string }) {
   const icones = [
     {
       icon: <MdMonetizationOn size={80} className='mb-2 text-3xl text-loguin-red' />,
@@ -44,9 +44,7 @@ export default function Implantar() {
   return (
     <>
       <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
-        <p className='mt-4 text-3xl font-medium md:mt-[5em] md:text-4xl'>
-          Por que implantar o sistema gi_gráfica inteligente?
-        </p>
+        <p className='mt-4 text-3xl font-medium md:mt-[5em] md:text-4xl'>{titulo}</p>
 
         <div className='icones'>
           <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-3'>
