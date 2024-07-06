@@ -1,15 +1,11 @@
 import { Helmet } from 'react-helmet'
-
 import Background from '@/assets/bg/3690578.png'
-
-// components
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Call, Sms, Whatsapp } from 'iconsax-react'
 import { useState } from 'react'
 import Button from '@/components/Button'
-
-// assets
+import { enviarEmail } from '@/utils/enviarEmail'
 
 export default function ContatoPage() {
   const pageTitle = 'Contato'
@@ -19,8 +15,9 @@ export default function ContatoPage() {
   const [texto, setTexto] = useState('')
   const [assunto, setAssunto] = useState('')
 
-  const emailBody = `Nome: ${nome}\nEmail: ${email}\n\nMensagem: ${texto}`
-  const emailLink = `mailto:contato@nucleologuin.com.br?subject=Contato%20do%20site&body=${encodeURIComponent(emailBody)}`
+  const handleEnviarEmail = async () => {
+    await enviarEmail(nome, email, assunto, texto)
+  }
 
   return (
     <>
@@ -39,7 +36,6 @@ export default function ContatoPage() {
       <div className='absolute top-[15em] z-10 flex w-full flex-col items-center justify-center md:items-start'>
         <div className='texto-header h-fulll flex w-full flex-col items-center justify-center text-white md:px-16'>
           <h1 className='text-5xl font-semibold md:text-6xl'>Contato</h1>
-
           <p className='text-1xl mt-4 md:text-3xl'>Fale Conosco</p>
         </div>
 
@@ -121,9 +117,7 @@ export default function ContatoPage() {
             </div>
 
             <div className='button-confira my-[2em]'>
-              <a href={emailLink} target='_black'>
-                <Button>Enviar Mensagem</Button>
-              </a>
+              <Button onClick={handleEnviarEmail}>Enviar Mensagem</Button>
             </div>
           </div>
         </div>

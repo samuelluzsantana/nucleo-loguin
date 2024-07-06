@@ -1,4 +1,4 @@
-import { Email } from 'mailjs'
+import { MailService } from 'mailjs'
 
 // Função para enviar email usando MailJS
 export const enviarEmail = async (
@@ -7,13 +7,13 @@ export const enviarEmail = async (
   assunto: string,
   texto: string
 ) => {
-  const emailInstance = new Email({
-    publicKey: 'YOUR_PUBLIC_KEY', // Substitua por sua chave pública do MailJS
-    accessToken: 'YOUR_ACCESS_TOKEN', // Substitua por seu token de acesso do MailJS
+  const emailService = new MailService({
+    publicKey: 'service_wfhi33h', // Substitua por sua chave pública do MailJS
+    accessToken: 'template_ea4zvx4', // Substitua por seu token de acesso do MailJS
   })
 
   try {
-    const response = await emailInstance.send({
+    const response = await emailService.sendEmail({
       from: email,
       to: 'contato@nucleologuin.com.br',
       subject: assunto,
