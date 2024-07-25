@@ -42,9 +42,10 @@ export default function ConhecaMais() {
               A implementação de um novo sistema pode parecer complicada, mas não é. Além
               disso, nossa equipe oferece suporte total, do início ao fim.
             </p>
-
             <div className='button-confira mt-8'>
-              <Button>Confira</Button>
+              <a href='/como-funciona' rel='noopener noreferrer'>
+                <Button>Confira</Button>
+              </a>
             </div>
           </div>
 

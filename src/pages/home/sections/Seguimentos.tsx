@@ -6,7 +6,7 @@ export default function Seguimentos() {
 
   return (
     <>
-      <div className='seguimentos z-10 h-[55em] bg-loguin-blue text-white md:flex md:items-center'>
+      <div className='seguimentos z-10 mt-[-10em] h-[55em] bg-loguin-blue text-white md:flex md:items-center'>
         <div className='aling flex flex-col items-center md:w-[100%] md:flex-row md:justify-evenly'>
           <div className='text-seguimentos mt-[10em] flex w-full flex-col items-center text-center md:w-[50em]'>
             <h3 className='text-3xl font-bold md:text-6xl'>

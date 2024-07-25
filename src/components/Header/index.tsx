@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 
 import { PiNotchesBold } from 'react-icons/pi'
 import Logo from '../Logo'
-import { HoverBorderGradient } from '../ui/hover-border-gradient'
 
 const Header = () => {
   const location = useLocation()
@@ -76,15 +75,6 @@ const Header = () => {
                 <PiNotchesBold size={20} />
               </span>
             </div>
-          </div>
-          <div className='hidden md:block'>
-            <HoverBorderGradient
-              containerClassName='rounded-full'
-              as='button'
-              className='flex items-center space-x-2 bg-white font-semibold text-loguin-blue'
-            >
-              <span>Contato</span>
-            </HoverBorderGradient>
           </div>
         </nav>
       </header>

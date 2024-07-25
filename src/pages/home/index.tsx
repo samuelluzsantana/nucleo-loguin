@@ -4,7 +4,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 // page/sections
 import HomeContainer from './sections/HomeContainer'
-import NossosParceiros from './sections/NossosParceiros'
 import Seguimentos from './sections/Seguimentos'
 import Transforme from './sections/Transforme'
 import Segmentos from './sections/Segmentos'
@@ -26,9 +25,6 @@ export default function Home() {
       <main>
         <section id='home'>
           <HomeContainer />
-        </section>
-        <section id='nossos-parceiros'>
-          <NossosParceiros />
         </section>
         <section id='seguimentos'>
           <Seguimentos />
