@@ -82,14 +82,20 @@ export default function Footer() {
           </div>
         </div>
         <div className='my-8 md:hidden'>
-          <div className='flex items-center justify-center text-sm text-white text-opacity-90'>
-            <p className='text-center'>
-              Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP 01310-200
+          <a
+            href='https://www.google.com/maps/place/Av.+Paulista,+1636+-+sala,+1504+-+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo+-+SP,+01310-200/@-23.56091,-46.656217,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59ceac541131:0x133777386f0f4c90!8m2!3d-23.56091!4d-46.656217!16s%2Fg%2F11sx5qv9vn?entry=ttu'
+            target='_blank'
+          >
+            <div className='flex items-center justify-center text-sm text-white text-opacity-90'>
+              <p className='text-center'>
+                Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP
+                01310-200
+              </p>
+            </div>
+            <p className='mt-4 w-full text-center text-sm text-white text-opacity-40'>
+              Nucleo Loguin - Todos os Direitos reservados
             </p>
-          </div>
-          <p className='mt-4 w-full text-center text-sm text-white text-opacity-40'>
-            Nucleo Loguin - Todos os Direitos reservados
-          </p>
+          </a>
         </div>
       </div>
 

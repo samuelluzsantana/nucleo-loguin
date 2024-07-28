@@ -14,9 +14,9 @@ export default function HomeContainer() {
   const words = ['completo', 'rápido', 'pratico', 'moderno']
 
   const scrollToSection = () => {
-    const section = document.getElementById('nossos-parceiros')
+    const section = document.getElementById('seguimentos')
     if (section) {
-      const yOffset = -200 // Altura de deslocamento
+      const yOffset = 40 // Altura de deslocamento
       const y = section.getBoundingClientRect().top + window.scrollY + yOffset
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
@@ -82,7 +82,10 @@ export default function HomeContainer() {
           />
         </div>
 
-        <div className='scroll absolute top-[33em] flex w-full justify-center text-white md:top-[40em]'>
+        <div
+          className='scroll absolute top-[33em] flex w-full justify-center text-white md:top-[40em]'
+          onClick={scrollToSection}
+        >
           <motion.div
             style={{ top: '43em' }}
             animate={{
@@ -90,10 +93,7 @@ export default function HomeContainer() {
               transition: { duration: 2, repeat: Infinity },
             }}
           >
-            <motion.div
-              className='scroll-assets cursor-pointer'
-              onClick={scrollToSection}
-            >
+            <motion.div className='scroll-assets cursor-pointer'>
               <PiCaretDownLight size={40} className='hidden md:block' />
               <PiCaretDownLight size={20} className='block md:hidden' />
             </motion.div>

@@ -1,4 +1,7 @@
-import pc1 from '@/assets/pc1.png'
+// import pc1 from '@/assets/pc1.png'
+
+import telaSistema from '@/assets/telaSistema.png'
+
 import Button from '@/components/Button'
 
 export default function Seguimentos() {
@@ -33,9 +36,15 @@ export default function Seguimentos() {
           </div>
 
           <div className='imagem-pc z-[1] flex md:relative md:right-12 md:top-8'>
-            <img
+            {/* <img
               src={pc1}
               alt='Imagem de um computador estilizado 3D com o programa da gráfica inteligente rodando de fundo'
+              className='h-80 w-80 object-contain md:h-[40rem] md:w-[40rem]'
+            /> */}
+
+            <img
+              src={telaSistema}
+              alt='captura de tela do programa da gráfica inteligente rodando de fundo'
               className='h-80 w-80 object-contain md:h-[40rem] md:w-[40rem]'
             />
           </div>
