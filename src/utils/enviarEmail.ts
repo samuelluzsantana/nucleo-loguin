@@ -1,6 +1,5 @@
 import { MailService } from 'mailjs'
 
-// Função para enviar email usando MailJS
 export const enviarEmail = async (
   nome: string,
   email: string,
@@ -8,8 +7,8 @@ export const enviarEmail = async (
   texto: string
 ) => {
   const emailService = new MailService({
-    publicKey: 'service_wfhi33h', // Substitua por sua chave pública do MailJS
-    accessToken: 'template_ea4zvx4', // Substitua por seu token de acesso do MailJS
+    publicKey: import.meta.env.VITE_EMAIL_SERVICE_ID, // Substitua pela variável de ambiente
+    accessToken: import.meta.env.VITE_TEMPLATE_ID, // Substitua pela variável de ambiente
   })
 
   try {

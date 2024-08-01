@@ -3,20 +3,46 @@ import Background from '@/assets/bg/3690578.png'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Call, Sms, Whatsapp } from 'iconsax-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Button from '@/components/Button'
-import { enviarEmail } from '@/utils/enviarEmail'
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
 
 export default function ContatoPage() {
   const pageTitle = 'Contato'
+  const form = useRef()
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [texto, setTexto] = useState('')
   const [assunto, setAssunto] = useState('')
 
-  const handleEnviarEmail = async () => {
-    await enviarEmail(nome, email, assunto, texto)
+  const enviarEmail = e => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_USER_ID
+      )
+      .then(
+        response => {
+          console.log('Email enviado com sucesso:', response)
+          // Limpar os campos após o envio
+          setNome('')
+          setEmail('')
+          setTexto('')
+          setAssunto('')
+
+          toast.success('Email enviado com sucesso!')
+        },
+        error => {
+          console.error('Erro ao enviar email:', error)
+          toast.error('Não foi possivel enviar o email, por favor tente mais tarde.')
+        }
+      )
   }
 
   return (
@@ -81,44 +107,49 @@ export default function ContatoPage() {
                 </a>
               </div>
             </div>
-          </div>
+            <form ref={form} onSubmit={enviarEmail} className='inputs w-full md:w-[40em]'>
+              <div className='mt-8 flex flex-col space-y-4 rounded-lg'>
+                <input
+                  type='text'
+                  placeholder='Nome'
+                  value={nome}
+                  onChange={e => setNome(e.target.value)}
+                  className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+                  name='user_name'
+                />
+                <input
+                  type='email'
+                  placeholder='Email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+                  name='user_email'
+                />
 
-          <div className='inputs w-full md:w-[40em]'>
-            <div className='mt-8 flex flex-col space-y-4 rounded-lg'>
-              <input
-                value={nome}
-                type='text'
-                placeholder='Nome'
-                className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
-                onChange={e => setNome(e.target.value)}
-              />
-              <input
-                type='email'
-                placeholder='Email'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
-              />
+                <input
+                  type='text'
+                  placeholder='Assunto'
+                  value={assunto}
+                  onChange={e => setAssunto(e.target.value)}
+                  className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+                  name='assunto'
+                />
 
-              <input
-                type='text'
-                placeholder='Assunto'
-                value={assunto}
-                onChange={e => setAssunto(e.target.value)}
-                className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
-              />
+                <textarea
+                  placeholder='Mensagem'
+                  value={texto}
+                  onChange={e => setTexto(e.target.value)}
+                  className='h-40 w-full resize-none rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+                  name='message'
+                ></textarea>
+              </div>
 
-              <textarea
-                placeholder='Mensagem'
-                value={texto}
-                onChange={e => setTexto(e.target.value)}
-                className='h-40 w-full resize-none rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
-              ></textarea>
-            </div>
-
-            <div className='button-confira my-[2em]'>
-              <Button onClick={handleEnviarEmail}>Enviar Mensagem</Button>
-            </div>
+              <div className='flex w-full justify-center'>
+                <div className='button-confira my-[2em] w-[15em]'>
+                  <Button type='submit'>Enviar Mensagem</Button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 

@@ -32,7 +32,18 @@ createRoot(root!).render(
           <Route path='/como-funciona' element={<ComoFunciona />} />
           <Route path='/contato' element={<ContatoPage />} />
         </Routes>
-        <ToastContainer />
+        <ToastContainer
+          position='top-center'
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='colored'
+        />
       </BrowserRouter>
     </PrimeReactProvider>
   </React.StrictMode>

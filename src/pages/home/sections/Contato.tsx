@@ -3,6 +3,8 @@ import empresaBgWeb from '@/assets/bg/empresa-bg-web.png'
 import Button from '@/components/Button'
 import { Call, Sms, Whatsapp } from 'iconsax-react'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
 
 export default function Contato() {
   const isMobile = window.innerWidth < 700
@@ -12,8 +14,40 @@ export default function Contato() {
   const [texto, setTexto] = useState('')
   const [assunto, setAssunto] = useState('')
 
-  const emailBody = `Nome: ${nome}\nEmail: ${email}\n\nMensagem: ${texto}`
-  const emailLink = `mailto:contato@nucleologuin.com.br?subject=Contato%20do%20site&body=${encodeURIComponent(emailBody)}`
+  const enviarEmail = e => {
+    e.preventDefault()
+
+    const templateParams = {
+      user_name: nome,
+      user_email: email,
+      assunto: assunto,
+      message: texto,
+    }
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_USER_ID
+      )
+      .then(
+        response => {
+          console.log('Email enviado com sucesso:', response)
+          // Limpar os campos após o envio
+          setNome('')
+          setEmail('')
+          setTexto('')
+          setAssunto('')
+
+          toast.success('Email enviado com sucesso!')
+        },
+        error => {
+          console.error('Erro ao enviar email:', error)
+          toast.error('Não foi possivel enviar o email, por favor tente mais tarde.')
+        }
+      )
+  }
 
   return (
     <>
@@ -68,7 +102,7 @@ export default function Contato() {
           </div>
         </div>
 
-        <div className='inputs md:w-[40em]'>
+        <form className='inputs md:w-[40em]' onSubmit={enviarEmail}>
           <div className='mt-8 flex flex-col space-y-4 rounded-lg'>
             <input
               value={nome}
@@ -76,6 +110,7 @@ export default function Contato() {
               placeholder='Nome'
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
               onChange={e => setNome(e.target.value)}
+              name='user_name'
             />
             <input
               type='email'
@@ -83,6 +118,7 @@ export default function Contato() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+              name='user_email'
             />
 
             <input
@@ -91,6 +127,7 @@ export default function Contato() {
               value={assunto}
               onChange={e => setAssunto(e.target.value)}
               className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+              name='assunto'
             />
 
             <textarea
@@ -98,15 +135,14 @@ export default function Contato() {
               value={texto}
               onChange={e => setTexto(e.target.value)}
               className='h-40 w-full resize-none rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+              name='message'
             ></textarea>
           </div>
 
-          <div className='button-confira mt-[2em]'>
-            <a href={emailLink} target='_black'>
-              <Button>Enviar Mensagem</Button>
-            </a>
+          <div className='button-confira mt-[2em] w-[15em]'>
+            <Button type='submit'>Enviar Mensagem</Button>
           </div>
-        </div>
+        </form>
       </div>
     </>
   )

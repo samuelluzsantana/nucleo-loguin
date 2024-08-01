@@ -8,7 +8,6 @@ import assets from '@/assets/bg/assets.png'
 import assets2 from '@/assets/bg/assets2.png'
 // assets/icons
 import { PiCaretDownLight } from 'react-icons/pi'
-import { scrollToContato } from '@/utils/scrolltoContato'
 
 export default function HomeContainer() {
   const words = ['completo', 'rápido', 'pratico', 'moderno']
@@ -21,7 +20,6 @@ export default function HomeContainer() {
       window.scrollTo({ top: y, behavior: 'smooth' })
     }
   }
-
   return (
     <>
       <img
@@ -63,7 +61,9 @@ export default function HomeContainer() {
 
           <div className='flex w-full justify-center md:justify-start'>
             <div className='mt-8 w-[15em]'>
-              <Button onClick={scrollToContato}>saiba mais</Button>
+              <a href='/como-funciona' rel='noopener noreferrer'>
+                <Button>saiba mais</Button>
+              </a>
             </div>
           </div>
         </div>

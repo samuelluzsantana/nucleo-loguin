@@ -4,6 +4,7 @@ interface ButtonProps {
   onClick?: () => void
   disabled?: boolean
   children: ReactNode
+  type?: 'button' | 'submit' | 'reset'
 }
 
 const Button: React.FC<ButtonProps> = ({ onClick, disabled = false, children }) => {

@@ -1,27 +1,8 @@
-import Slider from 'react-infinite-logo-slider'
-// imgs empresas
-import empresa1 from '@/assets/empresas/empresa1.png'
-import empresa2 from '@/assets/empresas/empresa2.png'
-import empresa3 from '@/assets/empresas/empresa3.png'
-import empresa4 from '@/assets/empresas/empresa4.png'
 // components
 import Button from '@/components/Button'
 import { scrollToContato } from '@/utils/scrolltoContato'
 
 export default function NossosParceiros() {
-  const slides = [
-    { imagem: empresa1, alt: 'Empresa 1' },
-    { imagem: empresa2, alt: 'Empresa 2' },
-    { imagem: empresa3, alt: 'Empresa 3' },
-    { imagem: empresa4, alt: 'Empresa 4' },
-    { imagem: empresa1, alt: 'Empresa 1' },
-    { imagem: empresa2, alt: 'Empresa 2' },
-    { imagem: empresa3, alt: 'Empresa 3' },
-    { imagem: empresa4, alt: 'Empresa 4' },
-  ]
-
-  const duplicatedSlides = [...slides, ...slides]
-
   // const isMobile = window.innerWidth < 700
 
   return (
@@ -46,7 +27,9 @@ export default function NossosParceiros() {
           </p>
 
           <div className='mt-8 w-full px-[2em] md:w-[40em]'>
-            <Button onClick={scrollToContato}>saiba mais</Button>
+            <div className='mt-8 w-[15em]'>
+              <Button onClick={scrollToContato}>saiba mais</Button>
+            </div>
           </div>
         </div>
       </div>
