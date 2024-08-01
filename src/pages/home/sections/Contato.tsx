@@ -139,8 +139,10 @@ export default function Contato() {
             ></textarea>
           </div>
 
-          <div className='button-confira mt-[2em] w-[15em]'>
-            <Button type='submit'>Enviar Mensagem</Button>
+          <div className='flex w-full justify-center'>
+            <div className='button-confira mt-[2em] w-[15em]'>
+              <Button type='submit'>Enviar Mensagem</Button>
+            </div>
           </div>
         </form>
       </div>
