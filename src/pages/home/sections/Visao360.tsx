@@ -3,13 +3,13 @@ import icones from '@/assets/bg/3685747.png'
 export default function Visao360() {
   return (
     <>
-      <div className='seguimentos z-10 h-[43em] bg-loguin-blue text-white md:flex md:items-center'>
-        <div className='aling flex h-full flex-col items-center md:w-[100%] md:flex-row md:justify-evenly'>
-          <div className='text-seguimentos flex w-full flex-col items-center px-8 text-center md:mt-3 md:w-[50em]'>
-            <h3 className='text-3xl font-bold md:text-6xl'>
+      <div className='seguimentos z-10 mt-[-2em] h-[43em] bg-loguin-blue text-white md:flex md:items-center'>
+        <div className='aling flex h-full flex-col items-center pt-8 md:w-[100%] md:flex-row md:justify-evenly'>
+          <div className='text-seguimentos flex w-full flex-col items-center px-8 text-center md:mt-3 md:w-[37em]'>
+            <h3 className='text-3xl font-bold md:text-5xl'>
               TENHA UMA VISÃO 360º DO SEU NEGÓCIO
             </h3>
-            <p className='mt-8 text-sm font-normal md:text-[1.5rem]'>
+            <p className='mt-8 text-base font-normal md:text-lg'>
               Saiba o que está acontecendo com a sua gráfica o tempo todo. Da pré-produção
               ao pós-cálculo, o sistema garante tanto uma visão ampla dos processos quanto
               informações detalhadas, tornando muito mais fácil agir sobre cada etapa.

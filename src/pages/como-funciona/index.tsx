@@ -183,18 +183,17 @@ export default function ComoFunciona() {
           </div>
 
           <div className='nossos-recurso w-full px-16 text-loguin-blue'>
-            <p className='mt-[4em] text-3xl font-medium md:mt-[5em] md:text-4xl'>
+            <p className='mt-[4em] text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
               NOSSOS RECURSOS
             </p>
 
-            <p className='mt-2 text-lg'>
-              {' '}
+            <p className='text-lg'>
               Confira todos os recursos do
               <span className='ml-2 font-bold'>GI_Gráfica Inteligente</span>
             </p>
 
             <div className='icones2'>
-              <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-3'>
+              <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
                 {icones2.map((item, index) => (
                   <div
                     key={index}

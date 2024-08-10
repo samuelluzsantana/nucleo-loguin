@@ -8,35 +8,42 @@ import {
   MdSettings,
 } from 'react-icons/md'
 
+import vendaboamarge from '@/assets/icones/venda-com-boa.png'
+import producaobaixocusto from '@/assets/icones/producaobaixocusto.png'
+import entregasnoprazo from '@/assets/icones/entregasnoprazo.png'
+import desperdicio from '@/assets/icones/desperdicio.png'
+import metas from '@/assets/icones/metas.png'
+import rapidez from '@/assets/icones/rapidez.png'
+
 export default function Implantar({ titulo }: { titulo: string }) {
   const icones = [
     {
-      icon: <MdMonetizationOn size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={vendaboamarge} alt='icone' height={100} width={100} />,
       title: 'VENDA COM BOA MARGEM',
       description: 'Acompanhamento diário de lucro líquido',
     },
     {
-      icon: <MdTrendingUp size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={producaobaixocusto} alt='icone' height={100} width={100} />,
       title: 'PRODUÇÃO COM BAIXO CUSTO',
       description: 'Confira resultados pelo Pós-Calculo avançado',
     },
     {
-      icon: <MdLocalShipping size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={entregasnoprazo} alt='icone' height={100} width={100} />,
       title: 'ENTREGAS NO PRAZO',
       description: 'Controle de vendas, produção e expedição',
     },
     {
-      icon: <MdDelete size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={desperdicio} alt='icone' height={100} width={100} />,
       title: 'FIM DO DESPERDÍCIO',
       description: 'Combata o desperdício na fonte',
     },
     {
-      icon: <MdFlag size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={metas} alt='icone' height={100} width={100} />,
       title: 'METAS DE TRABALHO BEM DEFINIDAS',
       description: 'Gerenciamento por indicadores',
     },
     {
-      icon: <MdSettings size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <img src={rapidez} alt='icone' height={100} width={100} />,
       title: 'INFORMAÇÃO COM RAPIDEZ',
       description: 'Tudo numa única interface',
     },

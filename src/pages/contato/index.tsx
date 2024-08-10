@@ -14,6 +14,7 @@ export default function ContatoPage() {
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('') // Novo campo de telefone
   const [texto, setTexto] = useState('')
   const [assunto, setAssunto] = useState('')
 
@@ -33,6 +34,7 @@ export default function ContatoPage() {
           // Limpar os campos após o envio
           setNome('')
           setEmail('')
+          setTelefone('') // Limpar o campo telefone
           setTexto('')
           setAssunto('')
 
@@ -40,7 +42,7 @@ export default function ContatoPage() {
         },
         error => {
           console.error('Erro ao enviar email:', error)
-          toast.error('Não foi possivel enviar o email, por favor tente mais tarde.')
+          toast.error('Não foi possível enviar o email, por favor tente mais tarde.')
         }
       )
   }
@@ -103,7 +105,7 @@ export default function ContatoPage() {
                   target='_blank'
                   className='ml-4 font-medium transition-colors duration-300'
                 >
-                  +55 11 995106712
+                  +55 11 99510-6712
                 </a>
               </div>
             </div>
@@ -124,6 +126,15 @@ export default function ContatoPage() {
                   onChange={e => setEmail(e.target.value)}
                   className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
                   name='user_email'
+                />
+
+                <input
+                  type='text'
+                  placeholder='Telefone' // Novo placeholder para telefone
+                  value={telefone}
+                  onChange={e => setTelefone(e.target.value)} // Atualizar o estado do telefone
+                  className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
+                  name='user_telefone'
                 />
 
                 <input

@@ -1,25 +1,19 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
-
-// styles
-import 'swiper/css'
-import 'swiper/css/pagination'
+import { useEffect, useState } from 'react'
 
 // assets/images
 import robson from '@/assets/pfp/robson.png'
 import ricardo from '@/assets/pfp/ricardo.png'
 import sidney from '@/assets/pfp/sidney.png'
-// icons
-import { useEffect, useState } from 'react'
 
 export default function Depoimentos() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 700)
+      setIsMobile(window.innerWidth < 768)
     }
 
+    handleResize()
     window.addEventListener('resize', handleResize)
 
     return () => {
@@ -30,7 +24,7 @@ export default function Depoimentos() {
   const depoimentos = [
     {
       nome: 'Sidney Anversa Victor',
-      usuario: '@ABIGRAF\n@CONGRAF',
+      usuario: 'ABIGRAF\nCONGRAF',
       foto: sidney,
       linkedin: '#',
       site: '#',
@@ -39,74 +33,55 @@ export default function Depoimentos() {
     },
     {
       nome: 'Ricardo Cruz',
-      usuario: '@Ricargraf',
+      usuario: 'Ricargraf',
       foto: ricardo,
       linkedin: '#',
       site: '#',
       depoimento:
-        '“O GI_Gráfica é moderno, fácil de operar, importantíssimo nas horas boas e nas horas não muito boas”.',
+        '"O GI_Gráfica é moderno, fácil de operar, importantíssimo nas horas boas e nas horas não muito boas".',
     },
     {
       nome: 'Robson Lopes Ribeiro',
-      usuario: '@Skygraf',
+      usuario: 'Skygraf',
       foto: robson,
       linkedin: '#',
       site: '#',
       depoimento:
-        '“A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada”',
+        '"A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada"',
     },
   ]
 
-  const [activeIndex, setActiveIndex] = useState(0)
-
   return (
-    <>
-      <div className='h-[40em] bg-white px-8 text-loguin-blue md:h-[35em] md:px-[12em]'>
-        <div className='titulo-depoimentos text-center md:text-left'>
-          <h3 className='text-2xl font-bold md:text-3xl'>Depoimentos</h3>
-          <p className='mt-2 text-sm font-normal md:text-[1.5rem]'>
-            A força dos nossos parceiros, quem usa recomenda.
-          </p>
-        </div>
-
-        <div className='cards-depoimentos w-full'>
-          <Swiper
-            pagination={{ clickable: true }}
-            modules={[Pagination]}
-            slidesPerView={isMobile ? 'auto' : 3}
-            centeredSlides={true}
-            loop={true}
-            spaceBetween={25}
-            className='cards-swipers mt-8'
-            onSlideChange={swiper => setActiveIndex(swiper.realIndex)}
-          >
-            {depoimentos.map((dep, index) => (
-              <SwiperSlide key={index} className={`flex w-full items-center`}>
-                <div
-                  className={`h-[25em] w-full rounded-lg border bg-white p-4 md:h-[15em] ${activeIndex === index ? 'border-[2.4px] border-zinc-300' : ''}`}
-                >
-                  <div className='mb-4 flex items-center justify-between'>
-                    <div className='flex items-center'>
-                      <img
-                        src={dep.foto}
-                        alt={`foto de perfil do ${dep.nome} da empresa ${dep.usuario}`}
-                        className='mr-4 h-12 w-12 rounded-md'
-                      />
-                      <div>
-                        <p className='font-bold text-gray-900'>{dep.nome}</p>
-                        <span className='text-sm font-normal text-blue-700'>
-                          {dep.usuario}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className='text-[13px] text-gray-600'>{dep.depoimento}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+    <div className='mb-12 bg-white px-4 py-8 text-loguin-blue md:px-12'>
+      <div className='titulo-depoimentos mb-8 text-center md:text-left'>
+        <h3 className='text-2xl font-bold md:text-3xl'>Depoimentos</h3>
+        <p className='mt-2 text-sm font-normal md:text-xl'>
+          A força dos nossos parceiros, quem usa recomenda.
+        </p>
       </div>
-    </>
+
+      <div
+        className={`cards-depoimentos ${isMobile ? 'flex flex-col space-y-6' : 'flex flex-row space-x-6'}`}
+      >
+        {depoimentos.map((dep, index) => (
+          <div key={index} className='flex-1'>
+            <div className='h-full w-full rounded-lg border bg-white p-4 shadow-md'>
+              <div className='mb-4 flex items-center'>
+                <img
+                  src={dep.foto}
+                  alt={`foto de perfil do ${dep.nome} da empresa ${dep.usuario}`}
+                  className='mr-4 h-12 w-12 rounded-md'
+                />
+                <div>
+                  <p className='font-bold text-gray-900'>{dep.nome}</p>
+                  <span className='text-sm font-normal text-blue-700'>{dep.usuario}</span>
+                </div>
+              </div>
+              <p className='text-sm text-gray-600'>{dep.depoimento}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }

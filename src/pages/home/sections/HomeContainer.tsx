@@ -28,7 +28,7 @@ export default function HomeContainer() {
         alt='Descrição da Imagem'
       />
 
-      <div className='absolute top-[10em] z-10 flex w-full flex-col items-center justify-center text-white md:items-start'>
+      <div className='absolute top-[8em] flex w-full flex-col items-center justify-center text-white md:items-start'>
         <div className='texto-e-button ml-0 md:ml-[9em]'>
           <div className='textos-home'>
             <h1 className='flex w-[7.5em] flex-col justify-start text-[2.5em] font-semibold leading-[1] md:w-[9.5em] md:text-6xl'>

@@ -24,8 +24,9 @@ export default function Segmentos() {
           <div className='segmentos-textos items-centertext-center flex flex-col md:mt-[4em] md:w-[35rem]'>
             <h3 className='mt-8 text-2xl font-bold md:text-3xl'>Segmentos Gráficos</h3>
             <p className='mt-8 text-sm font-normal md:text-[1.5rem]'>
-              O GI_Gráfica Inteligente pode ser aplicado a todos os segmentos da indústria
-              gráfica tornando os processos mais simples, fáceis e rápidos.
+              O <strong>GI-Gráfica Inteligente</strong> pode ser aplicado a todos os
+              segmentos da indústria gráfica tornando os processos mais simples, fáceis e
+              rápidos.
             </p>
 
             <ul className='disc ml-12 mt-6 list-disc text-left text-xl md:ml-0'>

@@ -1,23 +1,19 @@
 import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
-// assets/icons
-import {
-  ReceiptDiscount,
-  MoneyRecive,
-  MoneySend,
-  DocumentText,
-  ArchiveTick,
-  ClipboardText,
-} from 'iconsax-react'
-// styles
 import 'swiper/css'
 import 'swiper/css/pagination'
 
+// Imagens
+import comercial from '@/assets/icones/icones-2/comercial.png'
+import acessoria from '@/assets/icones/icones-2/acessoria.png'
+import fabricacao from '@/assets/icones/icones-2/fabricacao.png'
+import faturamento from '@/assets/icones/icones-2/faturamento.png'
+import financeiro from '@/assets/icones/icones-2/financeiro.png'
+import suprimentos from '@/assets/icones/icones-2/suprimentos.png'
+
 export default function SwipperCards() {
   const swiperRef = useRef(null)
-
-  const iconSize = 30
 
   const breakpoints = {
     768: { slidesPerView: 3 },
@@ -27,7 +23,7 @@ export default function SwipperCards() {
   const conteudo = [
     {
       titulo: 'COMERCIAL',
-      icone: <ReceiptDiscount size={iconSize} variant='Bold' />,
+      icone: <img src={comercial} alt='icone comercial' height={100} width={100} />,
       descricao: [
         'Orçamento',
         'Engenharia de Produto',
@@ -40,7 +36,7 @@ export default function SwipperCards() {
     },
     {
       titulo: 'FABRICAÇÃO',
-      icone: <MoneyRecive size={iconSize} variant='Bold' />,
+      icone: <img src={fabricacao} alt='icone fabricação' height={100} width={100} />,
       descricao: [
         'Empenho de materiais',
         'Programação por OP',
@@ -53,7 +49,7 @@ export default function SwipperCards() {
     },
     {
       titulo: 'SUPRIMENTOS',
-      icone: <ArchiveTick size={iconSize} variant='Bold' />,
+      icone: <img src={suprimentos} alt='icone suprimentos' height={100} width={100} />,
       descricao: [
         'Estoque em Elaboração',
         'Cotação de Preços',
@@ -66,7 +62,7 @@ export default function SwipperCards() {
     },
     {
       titulo: 'FINANCEIRO',
-      icone: <MoneySend size={iconSize} variant='Bold' />,
+      icone: <img src={financeiro} alt='icone financeiro' height={100} width={100} />,
       descricao: [
         'Budget',
         'CNBAs Envio/Retorno',
@@ -79,7 +75,7 @@ export default function SwipperCards() {
     },
     {
       titulo: 'FATURAMENTO',
-      icone: <DocumentText size={iconSize} variant='Bold' />,
+      icone: <img src={faturamento} alt='icone faturamento' height={100} width={100} />,
       descricao: [
         'Nota Fiscal Eletrônica',
         'Estoque de PA',
@@ -91,7 +87,7 @@ export default function SwipperCards() {
     },
     {
       titulo: 'ACESSÓRIOS',
-      icone: <ClipboardText size={iconSize} variant='Bold' />,
+      icone: <img src={acessoria} alt='icone acessoria' height={100} width={100} />,
       descricao: [
         'Gestão Indicadores',
         'Integrador Contábil',
@@ -105,38 +101,32 @@ export default function SwipperCards() {
   ]
 
   return (
-    <div className='swiper-container' ref={swiperRef}>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={20}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
-        breakpoints={breakpoints}
-        className='cards-swippers'
-      >
+    <div className='container mx-auto px-4'>
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         {conteudo.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className='card h-[30em] w-full rounded-lg border bg-white p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>
-              <div className='icon flex h-[4em] w-[4em] items-center justify-center rounded-[1em] bg-loguin-red text-white'>
-                {item.icone}
-              </div>
-
-              <div className='descricao-cards mt-7 text-loguin-blue'>
-                <h3 className='mb-2 text-xl font-bold'>{item.titulo}</h3>
-                {Array.isArray(item.descricao) ? (
-                  <ul className='list-disc pl-5'>
-                    {item.descricao.map((itemDesc, idx) => (
-                      <li key={idx}>{itemDesc}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className='font-bold'>{item.descricao}</p>
-                )}
-              </div>
+          <div
+            key={index}
+            className='card h-[30em] w-full rounded-lg border bg-white p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
+          >
+            <div className='icon flex h-[4em] w-[4em] items-center justify-center rounded-[1em] text-white'>
+              {item.icone}
             </div>
-          </SwiperSlide>
+
+            <div className='descricao-cards mt-7 text-loguin-blue'>
+              <h3 className='mb-2 text-xl font-bold'>{item.titulo}</h3>
+              {Array.isArray(item.descricao) ? (
+                <ul className='list-disc pl-5'>
+                  {item.descricao.map((itemDesc, idx) => (
+                    <li key={idx}>{itemDesc}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className='font-bold'>{item.descricao}</p>
+              )}
+            </div>
+          </div>
         ))}
-      </Swiper>
+      </div>
     </div>
   )
 }
