@@ -11,17 +11,45 @@ export default function Contato() {
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState('') // Novo estado para o telefone
+  const [telefone, setTelefone] = useState('')
   const [texto, setTexto] = useState('')
   const [assunto, setAssunto] = useState('')
+  const [error, setError] = useState('') // Estado para mensagens de erro
+
+  const formatTelefone = (value: string) => {
+    // Remove non-digit characters
+    const digits = value.replace(/\D/g, '')
+
+    // Format the number
+    if (digits.length <= 2) {
+      return `(${digits}`
+    } else if (digits.length <= 6) {
+      return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+    } else {
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`
+    }
+  }
+
+  const handleTelefoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedTelefone = formatTelefone(e.target.value)
+    setTelefone(formattedTelefone)
+  }
 
   const enviarEmail = e => {
     e.preventDefault()
 
+    // Verificar se todos os campos estão preenchidos
+    if (!nome || !email || !telefone || !assunto || !texto) {
+      setError('Por favor, preencha todos os campos.')
+      toast.info('Por favor, preencha todos os campos.')
+
+      return
+    }
+
     const templateParams = {
       user_name: nome,
       user_email: email,
-      user_telefone: telefone, // Adiciona o telefone ao templateParams
+      user_telefone: telefone,
       assunto: assunto,
       message: texto,
     }
@@ -39,9 +67,10 @@ export default function Contato() {
           // Limpar os campos após o envio
           setNome('')
           setEmail('')
-          setTelefone('') // Limpar o campo telefone
+          setTelefone('')
           setTexto('')
           setAssunto('')
+          setError('') // Limpar mensagem de erro
 
           toast.success('Email enviado com sucesso!')
         },
@@ -124,12 +153,13 @@ export default function Contato() {
           />
 
           <input
-            type='text'
-            placeholder='Telefone' // Novo campo para telefone
+            type='tel'
+            placeholder='Telefone'
             value={telefone}
-            onChange={e => setTelefone(e.target.value)}
+            onChange={handleTelefoneChange}
             className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
             name='user_telefone'
+            maxLength={15}
           />
 
           <input
@@ -148,6 +178,9 @@ export default function Contato() {
             className='h-40 w-full resize-none rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
             name='message'
           ></textarea>
+
+          {/* Mensagem de erro */}
+          {error && <p className='text-red-500'>{error}</p>}
         </div>
 
         <div className='flex w-full justify-center'>
