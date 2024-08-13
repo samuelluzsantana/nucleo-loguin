@@ -7,9 +7,13 @@ import Background from '@/assets/bg/3689631.png'
 import hands from '@/assets/bg/3689694.png'
 import pcbg from '@/assets/bg/3689706.jpg'
 
+import pcbg2 from '@/assets/bg/sistemaa.png'
+
 import { MdGroups2, MdModeComment } from 'react-icons/md'
 
-import { FaMountainSun, FaRocket } from 'react-icons/fa6'
+import { FaRocket } from 'react-icons/fa6'
+import { BiSolidBinoculars } from 'react-icons/bi'
+
 import { TbStarFilled } from 'react-icons/tb'
 import Footer from '@/components/Footer'
 
@@ -18,13 +22,13 @@ export default function NossaHistoria() {
 
   const icones = [
     {
-      icon: <FaMountainSun className='mb-2 text-4xl text-loguin-red' />,
+      icon: <FaRocket className='mb-2 text-4xl text-loguin-red' />,
       title: 'MISSÃO',
       description:
         'Otimizar todos os processos de nossos clientes com a implementação do nosso sistema de gestão integrada, gerando os melhores resultados em todas as etapas.',
     },
     {
-      icon: <FaRocket className='mb-2 text-4xl text-loguin-red' />,
+      icon: <BiSolidBinoculars className='mb-2 text-4xl text-loguin-red' />,
       title: 'VISÃO',
       description: 'Ser referência de sistema de gestão integrada na indústria gráfica.',
     },
@@ -56,9 +60,10 @@ export default function NossaHistoria() {
               Conheça o Núcleo Loguin
             </h1>
           </div>
-          <div className='mt-[20em] md:mt-[30em] md:h-[20em] md:px-[5em]'>
-            <div className='grid grid-cols-1 gap-4 p-4 text-loguin-blue md:grid-cols-2'>
-              <p className='text-2xl font-semibold md:md:text-[2rem] md:text-4xl'>
+
+          <div className='md: mb-[5em] mt-[20em] px-8 md:mb-[10em] md:mt-[30em] md:px-[12em]'>
+            <div className='flex flex-col items-center text-loguin-blue'>
+              <p className='mb-4 text-center text-2xl font-semibold md:md:text-[2rem] md:text-4xl'>
                 <span className='mr-[1rem] text-loguin-red'>PIONEIRISMO</span>
                 NA INDÚSTRIA GRÁFICA
               </p>
@@ -109,7 +114,7 @@ export default function NossaHistoria() {
               </div>
               <div className='h-[30em] w-full bg-orange-900'>
                 <img
-                  src={pcbg}
+                  src={pcbg2}
                   className='h-[30em] w-full select-none'
                   alt='Tela do PC'
                 />

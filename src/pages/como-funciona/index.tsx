@@ -17,12 +17,19 @@ import { FaBoxesPacking, FaBoxesStacked } from 'react-icons/fa6'
 import { BsGrid1X2Fill } from 'react-icons/bs'
 import Implantar from './Implantar'
 
+import vendaboamarge from '@/assets/icones/venda-com-boa.png'
+import producaobaixocusto from '@/assets/icones/producaobaixocusto.png'
+import entregasnoprazo from '@/assets/icones/entregasnoprazo.png'
+import desperdicio from '@/assets/icones/desperdicio.png'
+import metas from '@/assets/icones/metas.png'
+import rapidez from '@/assets/icones/rapidez.png'
+
 export default function ComoFunciona() {
   const pageTitle = 'Como Funciona'
 
   const icones2 = [
     {
-      icon: <FaHandsHelping size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <FaHandsHelping size={75} className='mb-2 text-3xl text-loguin-red' />,
       title: 'COMERCIAL',
       description: [
         'Orçamento',
@@ -35,7 +42,7 @@ export default function ComoFunciona() {
       ],
     },
     {
-      icon: <FaBoxesPacking size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <FaBoxesPacking size={75} className='mb-2 text-3xl text-loguin-red' />,
       title: 'FABRICAÇÃO',
       description: [
         'Empenho de materiais',
@@ -48,7 +55,7 @@ export default function ComoFunciona() {
       ],
     },
     {
-      icon: <FaBoxesStacked size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <FaBoxesStacked size={75} className='mb-2 text-3xl text-loguin-red' />,
       title: 'SUPRIMENTOS',
       description: [
         'Estoque em Elaboração',
@@ -61,7 +68,7 @@ export default function ComoFunciona() {
       ],
     },
     {
-      icon: <PiMonitorFill size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <PiMonitorFill size={75} className='mb-2 text-3xl text-loguin-red' />,
       title: 'ACESSÓRIOS',
       description: [
         'Gestão Indicadores',
@@ -74,7 +81,7 @@ export default function ComoFunciona() {
       ],
     },
     {
-      icon: <MdFlag size={80} className='mb-2 text-3xl text-loguin-red' />,
+      icon: <MdFlag size={75} className='mb-2 text-3xl text-loguin-red' />,
       title: 'FATURAMENTO',
       description: [
         'Nota Fiscal Eletrônica',
@@ -100,6 +107,39 @@ export default function ComoFunciona() {
     },
   ]
 
+  const icones = [
+    {
+      icon: <img src={vendaboamarge} alt='icone' height={100} width={100} />,
+      title: 'VENDA COM BOA MARGEM',
+      description: 'Acompanhamento diário de lucro líquido',
+    },
+    {
+      icon: <img src={producaobaixocusto} alt='icone' height={100} width={100} />,
+      title: 'PRODUÇÃO COM BAIXO CUSTO',
+      description: 'Confira resultados pelo Pós-Calculo avançado',
+    },
+    {
+      icon: <img src={entregasnoprazo} alt='icone' height={100} width={100} />,
+      title: 'ENTREGAS NO PRAZO',
+      description: 'Controle de vendas, produção e expedição',
+    },
+    {
+      icon: <img src={desperdicio} alt='icone' height={100} width={100} />,
+      title: 'FIM DO DESPERDÍCIO',
+      description: 'Combata o desperdício na fonte',
+    },
+    {
+      icon: <img src={metas} alt='icone' height={100} width={100} />,
+      title: 'METAS DE TRABALHO BEM DEFINIDAS',
+      description: 'Gerenciamento por indicadores',
+    },
+    {
+      icon: <img src={rapidez} alt='icone' height={100} width={100} />,
+      title: 'INFORMAÇÃO COM RAPIDEZ',
+      description: 'Tudo numa única interface',
+    },
+  ]
+
   return (
     <>
       <Helmet>
@@ -117,16 +157,42 @@ export default function ComoFunciona() {
       <div className='absolute top-[15em] z-10 flex w-full flex-col items-center justify-center text-white md:items-start'>
         <div className='flex w-full flex-col'>
           <div className='texto-header h-fulll flex w-full flex-col items-center justify-center px-8 md:px-16'>
-            <h1 className='text-5xl font-semibold md:text-6xl'>
+            <h1 className='text-center text-5xl font-semibold md:text-6xl'>
               SOLUÇÃO COMPLETA DE GESTÃO PARA GRÁFICAS
             </h1>
 
-            <p className='text-1xl mt-4 md:text-3xl'>
+            <p className='text-1xl mt-4 text-center md:text-3xl'>
               Otimização de todos os processos internos da empresa em um único software
             </p>
           </div>
 
-          <Implantar titulo='Por que implantar o sistema gi_gráfica inteligente?' />
+          <>
+            <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
+              <p className='mt-4 text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
+                POR QUE IMPLANTAR O<strong className='ml-[1rem]'>SISTEMA</strong>{' '}
+                <span className='text-loguin-red'>GI_GRÁFICA INTELIGENTE?</span>
+              </p>
+
+              <div className='icones'>
+                <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-3'>
+                  {icones.map((item, index) => (
+                    <div
+                      key={index}
+                      className='flex h-[20em] w-full flex-col items-center justify-center rounded-lg border text-center shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
+                    >
+                      <div className='mr-4'>{item.icon}</div>
+                      <div className='px-4'>
+                        <h2 className='text-xl font-semibold text-gray-900'>
+                          {item.title}
+                        </h2>
+                        <p className='text-gray-700'>{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </>
 
           <div className='imagens mt-4 w-full bg-loguin-blue'>
             <div className='grid w-full grid-cols-1 md:grid-cols-2'>
@@ -183,21 +249,23 @@ export default function ComoFunciona() {
           </div>
 
           <div className='nossos-recurso w-full px-16 text-loguin-blue'>
-            <p className='mt-[4em] text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
-              NOSSOS RECURSOS
-            </p>
+            <div className='mt-[4em] text-center md:mt-[5em]'>
+              <p className='text-3xl font-semibold md:text-4xl'>NOSSOS RECURSOS</p>
 
-            <p className='text-lg'>
-              Confira todos os recursos do
-              <span className='ml-2 font-bold'>GI_Gráfica Inteligente</span>
-            </p>
+              <p className='mt-2 text-lg font-medium'>
+                Confira todos os recursos do
+                <span className='ml-2 font-bold text-loguin-red'>
+                  GI_Gráfica Inteligente
+                </span>
+              </p>
+            </div>
 
             <div className='icones2'>
               <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
                 {icones2.map((item, index) => (
                   <div
                     key={index}
-                    className='flex h-[30em] w-full flex-col items-center justify-start rounded-lg border p-6 text-center shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
+                    className='flex h-auto w-full flex-col items-center justify-start rounded-lg border p-6 text-center shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
                   >
                     <div className='mr-4'>{item.icon}</div>
                     <div className='px-4'>
@@ -216,13 +284,13 @@ export default function ComoFunciona() {
             </div>
           </div>
 
-          <div className='conheca-etapas mt-[4em] h-[45em] px-8 text-loguin-blue md:h-[35em]'>
-            <div className='my-8 grid w-full grid-cols-1 gap-4 md:grid-cols-2'>
-              <div className='conheca-as-etapas'>
-                <p className='text-3xl font-semibold'>
+          <div className='conheca-etapas mt-[4em] flex h-[45em] flex-col items-center justify-center px-8 text-loguin-blue md:h-[35em]'>
+            <div className='my-8 grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-2'>
+              <div className='conheca-as-etapas text-center'>
+                <p className='text-2xl font-semibold'>
                   CONHEÇA AS ETAPAS DE CONTRATAÇÃO DAS NOSSAS SOLUÇÕES PARA SUA EMPRESA
                 </p>
-                <p className='text-lg font-medium'>
+                <p className='text-md mt-4'>
                   Entenda em três passos simples como vamos te atender:
                 </p>
               </div>
@@ -264,6 +332,7 @@ export default function ComoFunciona() {
               </div>
             </div>
           </div>
+
           <Footer />
         </div>
       </div>
