@@ -92,14 +92,14 @@ export default function ContatoPage() {
 
       <div className='absolute top-[15em] z-10 flex w-full flex-col items-center justify-center md:items-start'>
         <div className='texto-header h-fulll flex w-full flex-col items-center justify-center text-white md:px-16'>
-          <h1 className='text-5xl font-semibold md:text-6xl'>Contato</h1>
-          <p className='text-1xl mt-4 md:text-3xl'>Fale Conosco</p>
+          <h1 className='text-5xl font-semibold uppercase md:text-6xl'>Contato</h1>
+          <p className='text-1xl mt-4 uppercase md:text-3xl'>Fale Conosco</p>
         </div>
 
         <div className='o-sistema mt-[12em] flex w-full flex-col items-center px-16 text-loguin-blue md:mb-[10em] md:mt-[25em]'>
           <div className='texto md:w-[30em]'>
             <div className='text-fale-conosoco flex flex-col items-center pt-[10em] md:pt-0'>
-              <h3 className='text-3xl font-bold'>Fale Conosco</h3>
+              <h3 className='text-3xl font-bold uppercase'>Fale Conosco</h3>
               <p className='mt-4 text-justify font-normal'>
                 Se você quer conhecer mais sobre o nosso software ou tem alguma dúvida,
                 entre em contato através de um dos nossos canais.
@@ -165,7 +165,7 @@ export default function ContatoPage() {
                   onChange={handleTelefoneChange}
                   className='w-full rounded-lg border border-gray-300 p-4 focus:outline-none focus:ring-2 focus:ring-loguin-red'
                   name='user_telefone'
-                  maxLength={15} // (xx) xxxx-xxxx = 14 characters + 1 for safety
+                  maxLength={15}
                 />
 
                 <input

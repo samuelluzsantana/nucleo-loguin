@@ -27,10 +27,10 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className='flex h-[32em] flex-col bg-loguin-blue px-8 pt-8 md:h-[15em] md:flex-row-reverse md:justify-between'>
-        <div className='flex h-full flex-row-reverse md:flex-row'>
-          <div className='links mt-8 w-full text-right md:flex'>
-            <ul className='gap-4 md:mr-12 md:flex'>
+      <div className='flex h-[32em] flex-col bg-loguin-blue px-8 pt-8 lg:h-[15em] lg:flex-row-reverse lg:justify-between'>
+        <div className='flex h-full flex-row-reverse lg:flex-row'>
+          <div className='links mt-8 w-full text-right lg:flex'>
+            <ul className='gap-4 lg:mr-12 lg:flex'>
               {tabs.map((tab, index) => (
                 <li key={index}>
                   <a href={tab.path} className='text-white hover:underline'>
@@ -41,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className='fale-conosco'>
-            <div className='icons mt-8 flex w-[15em] flex-col items-start text-white md:mr-12 md:flex-row md:items-center'>
+            <div className='icons mt-8 flex w-[15em] flex-col items-start text-white lg:mr-12 lg:flex-row lg:items-center'>
               <div className='flex flex-col'>
                 <p className='mb-4 text-xl font-bold'>Fale Conosco</p>
 
@@ -55,7 +55,7 @@ export default function Footer() {
                   </a>
                 </div>
 
-                <div className='email mt-4 flex w-full items-center hover:text-loguin-red md:mt-2'>
+                <div className='email mt-4 flex w-full items-center hover:text-loguin-red lg:mt-2'>
                   <Sms size='22' variant='Bold' />
                   <a
                     href='mailto:contato@nucleologuin.com.br'
@@ -65,7 +65,7 @@ export default function Footer() {
                   </a>
                 </div>
 
-                <div className='email mt-4 flex w-full items-center hover:text-loguin-red md:mt-2'>
+                <div className='email mt-4 flex w-full items-center hover:text-loguin-red lg:mt-2'>
                   <Whatsapp size='22' variant='Bold' />
                   <a
                     href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
@@ -78,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className='social mb-8 flex w-full flex-col items-end md:ml-12 md:w-auto'>
+        <div className='social mb-8 flex w-full flex-col items-end lg:ml-12 lg:w-auto'>
           <div className='logo'>
             <Logo height={200} width={200} />
           </div>
@@ -96,7 +96,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className='my-8 md:hidden'>
+        <div className='my-8 lg:hidden'>
           <a
             href='https://www.google.com/maps/place/Av.+Paulista,+1636+-+sala,+1504+-+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo+-+SP,+01310-200/@-23.56091,-46.656217,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59ceac541131:0x133777386f0f4c90!8m2!3d-23.56091!4d-46.656217!16s%2Fg%2F11sx5qv9vn?entry=ttu'
             target='_blank'
@@ -116,7 +116,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='hidden bg-loguin-blue pb-8 pr-16 text-right text-sm md:block'>
+      <div className='hidden bg-loguin-blue pb-8 pr-16 text-right text-sm lg:block'>
         <a
           href='https://www.google.com/maps/place/Av.+Paulista,+1636+-+sala,+1504+-+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo+-+SP,+01310-200/@-23.56091,-46.656217,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59ceac541131:0x133777386f0f4c90!8m2!3d-23.56091!4d-46.656217!16s%2Fg%2F11sx5qv9vn?entry=ttu'
           target='_blank'

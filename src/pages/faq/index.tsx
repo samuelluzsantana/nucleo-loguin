@@ -69,10 +69,12 @@ export default function Faq() {
         alt='Background genérico com gráficos e estatísticas com um fundo vermelho'
       />
 
-      <div className='absolute top-[15em] z-10 flex w-full flex-col items-center justify-center md:items-start'>
-        <div className='texto-header flex h-full w-full flex-col items-start justify-center px-8 text-white md:px-16'>
-          <p className='text-2xl md:text-3xl'>Precisa de ajuda?</p>
-          <h1 className='mt-4 text-5xl font-semibold md:text-6xl'>Dúvidas Frequentes</h1>
+      <div className='absolute top-[15em] z-10 flex w-full flex-col items-center justify-center lg:items-start'>
+        <div className='texto-header flex h-full w-full flex-col items-start justify-center px-8 text-white lg:px-16'>
+          <p className='text-2xl lg:text-3xl'>Precisa de ajuda?</p>
+          <h1 className='mt-4 text-5xl font-semibold uppercase lg:text-6xl'>
+            Dúvidas Frequentes
+          </h1>
         </div>
 
         <div className='mt-[20em] w-full p-6'>
@@ -89,25 +91,25 @@ export default function Faq() {
           </Accordion>
         </div>
 
-        <div className='assets flex w-full flex-col md:h-[30em] md:flex-row md:items-center md:justify-between'>
-          <div className='assest1 md:w-[20em]'>
+        <div className='assets flex w-full flex-col lg:h-[30em] lg:flex-row lg:items-center lg:justify-between'>
+          <div className='assest1 lg:w-[20em]'>
             <img
               src={assets2}
-              className='bottom-[2em] h-[7em] select-none md:bottom-[27em] md:h-[8em]'
+              className='bottom-[2em] h-[7em] select-none lg:bottom-[27em] lg:h-[8em]'
               alt='assests de um quadrado vermelho'
             />
           </div>
 
           <div className='texto-assests px-8'>
             <div className='texto text-center text-loguin-blue'>
-              <h1 className='mt-4 text-3xl font-semibold'>Ainda com duvida?</h1>
-              <p className='text-1xl md:mt-2 md:px-[15em] md:text-[1.2rem]'>
+              <h1 className='mt-4 text-3xl font-semibold uppercase'>Ainda com duvida?</h1>
+              <p className='text-1xl lg:mt-2 lg:px-[15em] lg:text-[1.2rem]'>
                 Não hesite em entrar em contato conosco. Nossa equipe terá o prazer de
                 esclarecer todas as suas dúvidas e fornecer o suporte necessário. Estamos
                 aqui para ajudar!
               </p>
 
-              <div className='button-confira my-[2em] md:px-[25em]'>
+              <div className='button-confira my-[2em] lg:px-[25em]'>
                 <a href='/contato' rel='noopener noreferrer'>
                   <Button>Enviar Mensagem</Button>
                 </a>
@@ -115,10 +117,10 @@ export default function Faq() {
             </div>
           </div>
 
-          <div className='assets2 flex w-full justify-end md:h-full md:w-[20em] md:items-end'>
+          <div className='assets2 flex w-full justify-end lg:h-full lg:w-[20em] lg:items-end'>
             <img
               src={assets}
-              className='bottom-[7em] h-[10em] rotate--90 select-none md:h-[10em]'
+              className='bottom-[7em] h-[10em] rotate--90 select-none lg:h-[10em]'
               alt='assests de um quadrado vermelho'
             />
           </div>

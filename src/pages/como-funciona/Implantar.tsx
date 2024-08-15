@@ -1,13 +1,3 @@
-// assets
-import {
-  MdMonetizationOn,
-  MdLocalShipping,
-  MdDelete,
-  MdTrendingUp,
-  MdFlag,
-  MdSettings,
-} from 'react-icons/md'
-
 import vendaboamarge from '@/assets/icones/venda-com-boa.png'
 import producaobaixocusto from '@/assets/icones/producaobaixocusto.png'
 import entregasnoprazo from '@/assets/icones/entregasnoprazo.png'
@@ -51,7 +41,9 @@ export default function Implantar({ titulo }: { titulo: string }) {
   return (
     <>
       <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
-        <p className='mt-4 text-3xl font-medium md:mt-[5em] md:text-4xl'>{titulo}</p>
+        <p className='mt-4 text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
+          {titulo}
+        </p>
 
         <div className='icones'>
           <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-3'>

@@ -43,21 +43,21 @@ const Header = () => {
 
   return (
     <>
-      <header className='relative z-50 px-7 py-7 md:px-[4em]'>
+      <header className='relative z-50 px-7 py-7 lg:px-[4em]'>
         <nav className='flex items-center justify-between'>
-          <div className='flex w-[130px] items-center md:w-[200px]'>
+          <div className='flex w-[130px] items-center lg:w-[200px]'>
             <Logo height={100} width={100} />
           </div>
 
           <div className='flex items-center gap-3'>
-            <div className='navLinks absolute left-[-100%] top-[100%] flex h-[85vh] w-full gap-[1.5vw] px-5 py-5 duration-500 md:static md:h-auto md:w-auto md:items-center md:py-0'>
-              <div className='absolute bottom-0 left-0 h-full w-full backdrop-blur-lg md:hidden'></div>
+            <div className='navLinks absolute left-[-100%] top-[100%] flex h-[85vh] w-full gap-[1.5vw] px-5 py-5 duration-500 lg:static lg:h-auto lg:w-auto lg:items-center lg:py-0'>
+              <div className='absolute bottom-0 left-0 h-full w-full backdrop-blur-lg lg:hidden'></div>
 
-              <ul className='flex flex-col gap-8 text-white md:flex-row md:items-center md:gap-[3vw]'>
+              <ul className='flex flex-col gap-8 text-white lg:flex-row lg:items-center lg:gap-[3vw]'>
                 {tabs.map(tab => (
                   <li
                     key={tab.route}
-                    className={`relative max-w-fit py-1 pr-3 font-normal after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-loguin-red after:transition-all after:duration-300 hover:after:w-full md:pr-0 ${
+                    className={`relative max-w-fit py-1 pr-3 font-normal after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-loguin-red after:transition-all after:duration-300 hover:after:w-full lg:pr-0 ${
                       tab.disabled ? 'pointer-events-none select-none opacity-50' : ''
                     } ${location.pathname === tab.path ? 'after:w-full' : ''}`}
                   >
@@ -70,7 +70,7 @@ const Header = () => {
             <div className='flex items-center gap-2'>
               <span
                 onClick={onMenuToggle}
-                className='relative z-[11] cursor-pointer text-[30px] text-white md:hidden'
+                className='relative z-[11] cursor-pointer text-[30px] text-white lg:hidden'
               >
                 <PiNotchesBold size={20} />
               </span>

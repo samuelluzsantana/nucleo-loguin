@@ -9,13 +9,9 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
 // assets
-import { MdTrendingUp, MdFlag } from 'react-icons/md'
+import { MdTrendingUp } from 'react-icons/md'
 
-import { PiGearFineBold, PiMonitorFill } from 'react-icons/pi'
-import { FaHandsHelping } from 'react-icons/fa'
-import { FaBoxesPacking, FaBoxesStacked } from 'react-icons/fa6'
-import { BsGrid1X2Fill } from 'react-icons/bs'
-import Implantar from './Implantar'
+import { PiGearFineBold } from 'react-icons/pi'
 
 import vendaboamarge from '@/assets/icones/venda-com-boa.png'
 import producaobaixocusto from '@/assets/icones/producaobaixocusto.png'
@@ -23,89 +19,10 @@ import entregasnoprazo from '@/assets/icones/entregasnoprazo.png'
 import desperdicio from '@/assets/icones/desperdicio.png'
 import metas from '@/assets/icones/metas.png'
 import rapidez from '@/assets/icones/rapidez.png'
+import SwipperCards from '@/components/Cards'
 
 export default function ComoFunciona() {
   const pageTitle = 'Como Funciona'
-
-  const icones2 = [
-    {
-      icon: <FaHandsHelping size={75} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'COMERCIAL',
-      description: [
-        'Orçamento',
-        'Engenharia de Produto',
-        'Pós-Calculo',
-        'Proposta Comercial',
-        'Vendas Pendentes',
-        'Políticas de Preços',
-        'Ação da Concorrência',
-      ],
-    },
-    {
-      icon: <FaBoxesPacking size={75} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'FABRICAÇÃO',
-      description: [
-        'Empenho de materiais',
-        'Programação por OP',
-        'Programação por Máquina',
-        'Planejamento PEPS',
-        'Planejamento de Entregas',
-        'Apontamento Eletrônico',
-        'Inspeção de MP',
-      ],
-    },
-    {
-      icon: <FaBoxesStacked size={75} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'SUPRIMENTOS',
-      description: [
-        'Estoque em Elaboração',
-        'Cotação de Preços',
-        'Quarentena',
-        'Estoque de PA e MP',
-        'Kardex',
-        'Controle de Lotes',
-        'Recebimento Monitorado',
-      ],
-    },
-    {
-      icon: <PiMonitorFill size={75} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'ACESSÓRIOS',
-      description: [
-        'Gestão Indicadores',
-        'Integrador Contábil',
-        'Infoweb de PA',
-        'Controle Web Produção',
-        'Logística Web Entregas',
-        'RKW Online',
-        'DRE',
-      ],
-    },
-    {
-      icon: <MdFlag size={75} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'FATURAMENTO',
-      description: [
-        'Nota Fiscal Eletrônica',
-        'Estoque de PA',
-        'Comissões de Venda',
-        'Logística de Entregas',
-        'Pré-Nota',
-        'Baixa de Estoques PA',
-      ],
-    },
-    {
-      icon: <BsGrid1X2Fill size={40} className='mb-2 text-3xl text-loguin-red' />,
-      title: 'FINANCEIRO',
-      description: [
-        'Budget',
-        'CNBAs Envio/Retorno',
-        'Fluxo de Caixa',
-        'Conta Corrente',
-        'Boleto',
-        'Contas a Pagas',
-        'Contas a Receber',
-      ],
-    },
-  ]
 
   const icones = [
     {
@@ -167,7 +84,7 @@ export default function ComoFunciona() {
           </div>
 
           <>
-            <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
+            <div className='o-sistema mt-[20em] w-full px-16 text-loguin-blue'>
               <p className='mt-4 text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
                 POR QUE IMPLANTAR O<strong className='ml-[1rem]'>SISTEMA</strong>{' '}
                 <span className='text-loguin-red'>GI_GRÁFICA INTELIGENTE?</span>
@@ -203,13 +120,13 @@ export default function ComoFunciona() {
                   alt='Pessoa mostrando tabela de cores'
                 />
               </div>
-              <div className='h-[35em] w-full bg-loguin-blue'>
+              <div className='h-[35em] w-full bg-white'>
                 <div className='flex h-full w-full flex-col items-center justify-center px-12'>
                   <PiGearFineBold size={70} className='mb-2 text-3xl text-loguin-red' />
-                  <h2 className='mb-4 text-2xl font-semibold text-white'>
+                  <h2 className='mb-4 text-2xl font-semibold text-loguin-blue'>
                     SISTEMA INTEGRADO
                   </h2>
-                  <p className='w-full text-justify text-white'>
+                  <p className='w-full text-justify text-loguin-blue'>
                     Um Sistema Integrado ERP são rotinas pré-determinadas de operações
                     interligadas entre si. Partindo de uma configuração básica e cadastros
                     de dados, criam-se funcionalidades como formação de preço,
@@ -223,13 +140,13 @@ export default function ComoFunciona() {
             </div>
 
             <div className='flex w-full flex-col-reverse md:flex-row'>
-              <div className='h-[35em] w-full bg-loguin-blue'>
+              <div className='h-[35em] w-full bg-white'>
                 <div className='flex h-full w-full flex-col items-center justify-center px-12'>
                   <MdTrendingUp size={70} className='mb-2 text-3xl text-loguin-red' />
-                  <h2 className='mb-4 text-2xl font-semibold text-white'>
+                  <h2 className='mb-4 text-2xl font-semibold text-loguin-blue'>
                     AMPLIE SUAS VENDAS
                   </h2>
-                  <p className='w-full text-justify text-white'>
+                  <p className='w-full text-justify text-loguin-blue'>
                     Sua gráfica conseguirá otimizar todo processo interno de todos os
                     departamentos da empresa ao juntá-los num único software, integrando
                     dados e fornecendo relatórios precisos e concisos. Ao aprimorar a
@@ -261,25 +178,10 @@ export default function ComoFunciona() {
             </div>
 
             <div className='icones2'>
-              <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
-                {icones2.map((item, index) => (
-                  <div
-                    key={index}
-                    className='flex h-auto w-full flex-col items-center justify-start rounded-lg border p-6 text-center shadow-[0_3px_10px_rgb(0,0,0,0.2)]'
-                  >
-                    <div className='mr-4'>{item.icon}</div>
-                    <div className='px-4'>
-                      <h2 className='text-xl font-semibold text-gray-900'>
-                        {item.title}
-                      </h2>
-                      <ul className='mt-[2em] list-inside list-disc text-left text-gray-700'>
-                        {item.description.map((desc, descIndex) => (
-                          <li key={descIndex}>{desc}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
+              <div className='cards'>
+                <div className='mt-8'>
+                  <SwipperCards />
+                </div>
               </div>
             </div>
           </div>
