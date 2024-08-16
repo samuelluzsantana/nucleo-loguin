@@ -33,7 +33,7 @@ export default function Home() {
           <Visao360 />
         </section>
         <section id='porque-implantar'>
-          <Implantar titulo='POR QUE GRÁFICAS DE EXPRESSÃO EVOLUÍRAM COM O SISTEMA GI_GRÁFICA INTELIGENTE?' />
+          <Implantar />
         </section>
         <section id='segmentos-graficos'>
           <Segmentos />

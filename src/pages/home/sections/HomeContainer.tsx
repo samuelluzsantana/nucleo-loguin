@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 // components
 import Button from '@/components/Button'
-import { FlipWords } from '@/components/ui/flip-words'
 // assets
 import Background from '@/assets/bg/background.png'
 import assets from '@/assets/bg/assets.png'
@@ -10,8 +9,6 @@ import assets2 from '@/assets/bg/assets2.png'
 import { PiCaretDownLight } from 'react-icons/pi'
 
 export default function HomeContainer() {
-  const words = ['completo', 'rápido', 'pratico', 'moderno']
-
   const scrollToSection = () => {
     const section = document.getElementById('seguimentos')
     if (section) {
@@ -24,31 +21,15 @@ export default function HomeContainer() {
     <>
       <img
         src={Background}
-        className='relative bottom-[7em] h-[50em] w-full select-none lg:h-[66em]'
+        className='relative bottom-[7em] h-[60em] w-full select-none md:h-[50em] lg:h-[66em]'
         alt='Descrição da Imagem'
       />
 
-      <div className='absolute top-[8em] flex w-full flex-col items-center justify-center text-white lg:items-start'>
+      <div className='absolute top-[14em] flex w-full flex-col items-center justify-center text-white md:top-[15.5em] lg:top-[12em] lg:items-start'>
         <div className='texto-e-button ml-0 lg:ml-[9em]'>
-          <div className='textos-home flex flex-col items-center'>
-            <div className='flex w-[7.5em] flex-col justify-start text-[2.5em] font-semibold leading-[1] md:w-[12em] md:text-center lg:w-[9.5em] lg:text-6xl'>
-              <div className='flex flex-col md:flex-row md:justify-center lg:flex-row lg:justify-normal'>
-                <span className='mr-0 md:mr-[1rem] lg:mr-[1rem]'>O mais</span>
-                <span className='text-white'>
-                  <FlipWords words={words} /> <br />
-                </span>
-              </div>
-
-              <div className='flex flex-col md:flex-row md:justify-center lg:flex-row lg:justify-normal'>
-                <span className='mr-0 md:mr-[1rem] lg:mr-[1rem]'>sistema</span>
-                <span className='block lg:hidden'>integrado de</span>
-                <span className='hidden lg:block'>integrado</span>
-              </div>
-
-              <span className='flex w-full md:justify-center lg:justify-normal'>
-                <span className='mr:0 hidden lg:mr-[1rem] lg:block'>de</span> gestão
-                gráficas
-              </span>
+          <div className='textos-home flex flex-col items-center lg:items-start'>
+            <div className='flex w-[7.5em] flex-col justify-start text-[2.5em] font-semibold leading-[1] md:w-[12em] md:text-center lg:w-[14em] lg:text-left lg:text-6xl'>
+              <h1>O MAIS COMPLETO SISTEMA INTEGRADO DE GESTÃO PARA GRÁFICAS</h1>
             </div>
 
             <h2 className='mt-8 w-[20em] text-justify text-sm font-normal md:w-[30em] lg:w-[30em] lg:text-left lg:text-xl'>
@@ -77,13 +58,13 @@ export default function HomeContainer() {
 
           <img
             src={assets}
-            className='bottom-[7em] h-[10em] select-none lg:relative lg:bottom-[10em] lg:h-[35em]'
+            className='bottom-[7em] h-[10em] select-none lg:relative lg:bottom-[15em] lg:h-[35em]'
             alt='assests de um quadrado vermelho'
           />
         </div>
 
         <div
-          className='scroll absolute top-[33em] flex w-full justify-center text-white lg:top-[40em]'
+          className='scroll absolute top-[40em] flex w-full justify-center text-white md:top-[30em] lg:top-[40em]'
           onClick={scrollToSection}
         >
           <motion.div

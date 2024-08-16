@@ -5,7 +5,7 @@ import desperdicio from '@/assets/icones/desperdicio.png'
 import metas from '@/assets/icones/metas.png'
 import rapidez from '@/assets/icones/rapidez.png'
 
-export default function Implantar({ titulo }: { titulo: string }) {
+export default function Implantar() {
   const icones = [
     {
       icon: <img src={vendaboamarge} alt='icone' height={100} width={100} />,
@@ -41,8 +41,9 @@ export default function Implantar({ titulo }: { titulo: string }) {
   return (
     <>
       <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
-        <p className='mt-4 text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
-          {titulo}
+        <p className='mt-4 flex-wrap text-center text-3xl font-bold md:mt-[5em] md:text-4xl'>
+          POR QUE GRÁFICAS DE EXPRESSÃO EVOLUÍRAM COM O SISTEMA
+          <span className='ml-2 font-bold text-loguin-red'>GI_Gráfica Inteligente</span>?
         </p>
 
         <div className='icones'>

@@ -5,7 +5,6 @@ import Header from '@/components/Header'
 // assets
 import Background from '@/assets/bg/3689631.png'
 import hands from '@/assets/bg/3689694.png'
-import pcbg from '@/assets/bg/3689706.jpg'
 
 import pcbg2 from '@/assets/bg/sistemaa.png'
 
@@ -56,7 +55,7 @@ export default function NossaHistoria() {
       <div className='absolute top-[10em] z-10 flex w-full flex-col items-center justify-center text-white md:items-start'>
         <div className='flex w-full flex-col'>
           <div className='texto-header h-fulll flex w-full items-center justify-center px-8 md:px-16'>
-            <h1 className='text-5xl font-semibold md:text-6xl'>
+            <h1 className='text-center text-5xl font-semibold uppercase md:text-6xl'>
               Conheça o Núcleo Loguin
             </h1>
           </div>

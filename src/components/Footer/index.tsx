@@ -71,7 +71,7 @@ export default function Footer() {
                     href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
                     className='ml-2 text-[1rem] transition-colors duration-300'
                   >
-                    +55 11 995106712
+                    +55 11 99510-6712
                   </a>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Footer() {
           >
             <div className='flex items-center justify-center text-sm text-white text-opacity-90'>
               <FaMapMarkerAlt className='mr-2' /> {/* Adiciona o ícone de mapa */}
-              <p>
+              <p className='text-center'>
                 Av. Paulista, 1636 - Conjunto 1504 - São Paulo - Sp - Brasil - CEP
                 01310-200
               </p>

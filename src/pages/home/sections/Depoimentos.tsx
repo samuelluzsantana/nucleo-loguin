@@ -54,7 +54,7 @@ export default function Depoimentos() {
   return (
     <div className='mb-12 bg-white px-4 py-8 text-loguin-blue md:px-12'>
       <div className='titulo-depoimentos mb-8 text-center md:text-left'>
-        <h3 className='text-2xl font-bold md:text-3xl'>Depoimentos</h3>
+        <h3 className='text-2xl font-bold uppercase md:text-3xl'>Depoimentos</h3>
         <p className='mt-2 text-sm font-normal md:text-xl'>
           A força dos nossos parceiros, quem usa recomenda.
         </p>

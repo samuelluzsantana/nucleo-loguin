@@ -61,7 +61,7 @@ export default function Contato() {
       >
         <div className='texto lg:w-[30em]'>
           <div className='text-fale-conosoco flex flex-col items-center pt-[10em] text-white lg:pt-0'>
-            <h3 className='text-3xl font-bold'>Fale Conosco</h3>
+            <h3 className='text-3xl font-bold uppercase'>Fale Conosco</h3>
             <p className='mt-4 text-center font-normal lg:text-justify'>
               Se você quer conhecer mais sobre o nosso software ou tem alguma dúvida,
               entre em contato através de um dos nossos canais.
@@ -96,7 +96,7 @@ export default function Contato() {
                 target='_blank'
                 className='ml-4 font-medium transition-colors duration-300'
               >
-                +55 11 995106712
+                +55 11 99510-6712
               </a>
             </div>
           </div>
