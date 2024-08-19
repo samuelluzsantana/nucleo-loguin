@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
           <div className='fale-conosco'>
             <div className='icons mt-8 flex w-[15em] flex-col items-start text-white lg:mr-12 lg:flex-row lg:items-center'>
-              <div className='flex flex-col'>
+              <div className='ml-[0.7rem] flex flex-col'>
                 <p className='mb-4 text-xl font-bold'>Fale Conosco</p>
 
                 <div className='telefone flex w-full items-center hover:text-loguin-red'>

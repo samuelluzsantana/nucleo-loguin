@@ -41,10 +41,12 @@ export default function Implantar() {
   return (
     <>
       <div className='o-sistema mt-[12em] w-full px-16 text-loguin-blue'>
-        <p className='mt-4 flex-wrap text-center text-3xl font-bold md:mt-[5em] md:text-4xl'>
-          POR QUE GRÁFICAS DE EXPRESSÃO EVOLUÍRAM COM O SISTEMA
-          <span className='ml-2 font-bold text-loguin-red'>GI_Gráfica Inteligente</span>?
-        </p>
+        <div className='mt-4 text-center text-3xl font-bold md:mt-[5em] md:text-4xl'>
+          <p>POR QUE GRÁFICAS DE EXPRESSÃO EVOLUÍRAM COM O SISTEMA</p>
+          <p className='inline-block'>
+            <span className='font-bold text-loguin-red'>GI_Gráfica Inteligente</span>?
+          </p>
+        </div>
 
         <div className='icones'>
           <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-3'>
