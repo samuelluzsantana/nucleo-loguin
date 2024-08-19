@@ -17,11 +17,11 @@ export default function Segmentos() {
     <>
       <div className='mt-[12em] h-[55em] bg-loguin-red px-8 text-white lg:h-[35em] lg:px-[5em]'>
         <div className='foto center flex flex-col justify-center lg:flex-row lg:justify-evenly'>
-          <div className='mt-[-4em] flex w-full content-center items-center justify-center lg:mr-[3em] lg:mt-[5em] lg:h-full'>
+          <div className='mt-[-4em] flex w-full content-center items-center justify-center lg:mr-[0em] lg:mt-[5em] lg:h-full'>
             <img src={mulher} alt='Mulher trabalhando em uma gráfica' />
           </div>
 
-          <div className='segmentos-textos flex w-full flex-col items-center text-center lg:mt-[4em] lg:w-[35rem]'>
+          <div className='segmentos-textos flex w-full flex-col items-center text-center lg:mr-[10em] lg:mt-[4em] lg:w-[35rem]'>
             <h3 className='mt-8 text-2xl font-bold uppercase lg:text-3xl'>
               Segmentos Gráficos
             </h3>

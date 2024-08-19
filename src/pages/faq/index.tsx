@@ -109,10 +109,12 @@ export default function Faq() {
                 aqui para ajudar!
               </p>
 
-              <div className='button-confira my-[2em] lg:px-[25em]'>
-                <a href='/contato' rel='noopener noreferrer'>
-                  <Button>Enviar Mensagem</Button>
-                </a>
+              <div className='flex w-full justify-center'>
+                <div className='mt-8 w-[15em]'>
+                  <a href='/contato' rel='noopener noreferrer'>
+                    <Button>Enviar Mensagem</Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

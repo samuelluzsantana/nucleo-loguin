@@ -131,7 +131,9 @@ export default function NossaHistoria() {
                 <h2 className='mt-4 text-2xl font-medium text-loguin-blue md:text-3xl'>
                   {item.title}
                 </h2>
-                <p className='mt-4 text-loguin-blue md:text-[1rem]'>{item.description}</p>
+                <p className='mt-4 text-justify text-loguin-blue md:text-[1rem]'>
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
