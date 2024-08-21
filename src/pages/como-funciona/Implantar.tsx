@@ -44,7 +44,10 @@ export default function Implantar() {
         <div className='mt-4 text-center text-3xl font-bold md:mt-[5em] md:text-4xl'>
           <p>POR QUE GRÁFICAS DE EXPRESSÃO EVOLUÍRAM COM O SISTEMA</p>
           <p className='inline-block'>
-            <span className='font-bold text-loguin-red'>GI_Gráfica Inteligente</span>?
+            <span className='font-bold uppercase text-loguin-red'>
+              GI_Gráfica Inteligente
+            </span>
+            ?
           </p>
         </div>
 

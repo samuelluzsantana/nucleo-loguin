@@ -86,7 +86,7 @@ export default function ComoFunciona() {
           <>
             <div className='o-sistema mt-[20em] w-full px-16 text-loguin-blue'>
               <p className='mt-4 text-center text-3xl font-medium md:mt-[5em] md:text-4xl'>
-                POR QUE IMPLANTAR O<strong className='ml-[1rem]'>SISTEMA</strong>{' '}
+                <strong>O POR QUE IMPLANTAR SISTEMA</strong>{' '}
                 <span className='text-loguin-red'>GI_GRÁFICA INTELIGENTE?</span>
               </p>
 
@@ -126,15 +126,21 @@ export default function ComoFunciona() {
                   <h2 className='mb-4 text-2xl font-semibold text-loguin-blue'>
                     SISTEMA INTEGRADO
                   </h2>
-                  <p className='w-full text-justify text-loguin-blue'>
-                    Um Sistema Integrado ERP são rotinas pré-determinadas de operações
-                    interligadas entre si. Partindo de uma configuração básica e cadastros
-                    de dados, criam-se funcionalidades como formação de preço,
-                    movimentação de materiais (compra, empenho e uso), registros
-                    financeiros e muitas outras funções. Como o sistema é integrado, não
-                    há redigitação (portanto, sem erros), unindo os dados da produção com
-                    a administração.
-                  </p>
+
+                  <div className='w-full lg:px-8'>
+                    <p className='text-justify text-loguin-blue'>
+                      Um Sistema Integrado ERP são rotinas pré-determinadas de operações
+                      interligadas entre si. Partindo de uma configuração básica e
+                      cadastros de dados, criam-se funcionalidades como formação de preço,
+                      movimentação de materiais (compra, empenho e uso), registros
+                      financeiros e muitas outras funções.
+                    </p>
+
+                    <p className='mt-2 text-loguin-blue'>
+                      Como o sistema é integrado, não há redigitação (portanto, sem
+                      erros), unindo os dados da produção com a administração.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -146,13 +152,20 @@ export default function ComoFunciona() {
                   <h2 className='mb-4 text-2xl font-semibold text-loguin-blue'>
                     AMPLIE SUAS VENDAS
                   </h2>
-                  <p className='w-full text-justify text-loguin-blue'>
-                    Sua gráfica conseguirá otimizar todo processo interno de todos os
-                    departamentos da empresa ao juntá-los num único software, integrando
-                    dados e fornecendo relatórios precisos e concisos. Ao aprimorar a
-                    parte operacional do seu negócio, essa ferramenta permite que o gestor
-                    consiga satisfazer seus clientes e ampliar as vendas.
-                  </p>
+
+                  <div className='w-full lg:px-8'>
+                    <p className='text-justify text-loguin-blue'>
+                      Sua gráfica conseguirá otimizar todo processo interno de todos os
+                      departamentos da empresa ao juntá-los num único software, integrando
+                      dados e fornecendo relatórios precisos e concisos.
+                    </p>
+
+                    <p className='mt-2 text-loguin-blue'>
+                      Ao aprimorar a parte operacional do seu negócio, essa ferramenta
+                      permite que o gestor consiga satisfazer seus clientes e ampliar as
+                      vendas.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className='h-[35em] w-full bg-orange-900'>

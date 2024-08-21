@@ -92,7 +92,7 @@ export default function Contato() {
             <div className='whatsapp mt-4 flex w-full items-center hover:text-loguin-red'>
               <Whatsapp size='32' variant='Bold' />
               <a
-                href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
+                href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20*GI_Gr%C3%A1fica%20Inteligente*'
                 target='_blank'
                 className='ml-4 font-medium transition-colors duration-300'
               >

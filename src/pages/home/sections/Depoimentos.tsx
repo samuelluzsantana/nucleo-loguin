@@ -29,7 +29,7 @@ export default function Depoimentos() {
       linkedin: '#',
       site: '#',
       depoimento:
-        'Desde os anos 90, o Sistema GI_Gráfica Inteligente possui a gestão total da Congraf, desde orçamentos, pedidos, consulta ao estoque, requisições de compras, controle de produção, administração dos tempos de processos e de toda a produção, entregas e notas fiscais.',
+        ' “Desde os anos 90 , o Sistema GI_Gráfica Inteligente possui a gestão total da Congraf, desde orçamentos, pedidos, consulta ao estoque, requisições de compras , controle de produção,  administração dos tempos de processos  e de toda a produção, entregas e notas fiscais, inclusive com constantes atualizações fiscais e tributárias, possuindo ligação direta com a Secretaria da Fazenda. Também durante as fases de implantação de ISO, o sistema foi fundamental para melhorias em controle de qualidade de processos e produtos”. ',
     },
     {
       nome: 'Ricardo Cruz',
@@ -38,7 +38,7 @@ export default function Depoimentos() {
       linkedin: '#',
       site: '#',
       depoimento:
-        '"O GI_Gráfica é moderno, fácil de operar, importantíssimo nas horas boas e nas horas não muito boas".',
+        '“O GI é moderno, fácil de operar, importantíssimo nas horas boas e nas horas não muito boas”.',
     },
     {
       nome: 'Robson Lopes Ribeiro',
@@ -47,13 +47,13 @@ export default function Depoimentos() {
       linkedin: '#',
       site: '#',
       depoimento:
-        '"A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada"',
+        '"A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada."',
     },
   ]
 
   return (
     <div className='mb-12 bg-white px-4 py-8 text-loguin-blue md:px-12'>
-      <div className='titulo-depoimentos mb-8 text-center md:text-left'>
+      <div className='titulo-depoimentos mb-8 text-center'>
         <h3 className='text-2xl font-bold uppercase md:text-3xl'>Depoimentos</h3>
         <p className='mt-2 text-sm font-normal md:text-xl'>
           A força dos nossos parceiros, quem usa recomenda.

@@ -21,7 +21,7 @@ export default function Footer() {
     { icon: <FaLinkedin />, href: 'https://www.linkedin.com/company/nucleologuin' },
     {
       icon: <FaWhatsapp />,
-      href: 'https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*',
+      href: 'https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20*GI_Gr%C3%A1fica%20Inteligente*',
     },
   ]
 
@@ -68,7 +68,7 @@ export default function Footer() {
                 <div className='email mt-4 flex w-full items-center hover:text-loguin-red lg:mt-2'>
                   <Whatsapp size='22' variant='Bold' />
                   <a
-                    href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20*GI_Gr%C3%A1fica%20Inteligente*'
+                    href='https://wa.me/5511995106712?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20*GI_Gr%C3%A1fica%20Inteligente*'
                     className='ml-2 text-[1rem] transition-colors duration-300'
                   >
                     +55 11 99510-6712
