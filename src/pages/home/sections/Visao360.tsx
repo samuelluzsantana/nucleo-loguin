@@ -9,7 +9,7 @@ export default function Visao360() {
             <h3 className='text-3xl font-bold md:text-5xl'>
               TENHA UMA VISÃO 360º DO SEU NEGÓCIO
             </h3>
-            <p className='mt-8 text-base font-normal md:text-lg'>
+            <p className='mt-8 text-justify text-base font-normal md:text-lg'>
               Saiba o que está acontecendo com a sua gráfica o tempo todo. Da pré-produção
               ao pós-cálculo, o sistema garante tanto uma visão ampla dos processos quanto
               informações detalhadas, tornando muito mais fácil agir sobre cada etapa.

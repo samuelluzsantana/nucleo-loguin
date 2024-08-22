@@ -103,7 +103,7 @@ export default function Faq() {
           <div className='texto-assests px-8'>
             <div className='texto text-center text-loguin-blue'>
               <h1 className='mt-4 text-3xl font-semibold uppercase'>Ainda com duvida?</h1>
-              <p className='text-1xl lg:mt-2 lg:px-[15em] lg:text-[1.2rem]'>
+              <p className='text-1xl text-justify lg:mt-2 lg:px-[15em] lg:text-[1.2rem]'>
                 Não hesite em entrar em contato conosco. Nossa equipe terá o prazer de
                 esclarecer todas as suas dúvidas e fornecer o suporte necessário. Estamos
                 aqui para ajudar!

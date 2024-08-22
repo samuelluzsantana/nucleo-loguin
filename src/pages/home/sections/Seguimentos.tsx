@@ -14,7 +14,7 @@ export default function Seguimentos() {
               <p className='mt-8 text-base font-normal md:text-lg'>
                 Gestão inteligente é para todos.
               </p>
-              <p className='mt-8 text-base font-normal md:text-lg'>
+              <p className='mt-8 text-justify text-base font-normal md:text-lg'>
                 Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando
                 sempre os melhores resultados.{' '}
               </p>

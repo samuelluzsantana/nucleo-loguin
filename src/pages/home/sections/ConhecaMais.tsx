@@ -34,7 +34,7 @@ export default function ConhecaMais() {
           <h3 className='text-2xl font-bold uppercase lg:text-[2rem]'>
             Conheça mais sobre nosso software
           </h3>
-          <p className='mt-2 text-sm font-normal lg:text-[1rem]'>
+          <p className='mt-2 text-justify text-sm font-normal lg:text-[1rem]'>
             A implementação de um novo sistema pode parecer complicada, mas não é. Além
             disso, nossa equipe oferece suporte total, do início ao fim.
           </p>

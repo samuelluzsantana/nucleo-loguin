@@ -62,7 +62,7 @@ export default function Contato() {
         <div className='texto lg:w-[30em]'>
           <div className='text-fale-conosoco flex flex-col items-center pt-[10em] text-white lg:mr-[2em] lg:pt-0'>
             <h3 className='text-3xl font-bold uppercase'>Fale Conosco</h3>
-            <p className='mt-4 text-center font-normal lg:text-justify'>
+            <p className='mt-4 text-justify font-normal'>
               Se você quer conhecer mais sobre o nosso software ou tem alguma dúvida,
               entre em contato através de um dos nossos canais.
             </p>
