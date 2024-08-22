@@ -16,7 +16,7 @@ export default function Seguimentos() {
               </p>
               <p className='mt-8 text-justify text-base font-normal md:text-lg'>
                 Nosso sistema comporta gráficas de todos os tamanhos e setores, gerando
-                sempre os melhores resultados.{' '}
+                sempre os melhores resultados.
               </p>
             </div>
 

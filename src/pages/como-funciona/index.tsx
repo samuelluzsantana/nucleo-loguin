@@ -136,7 +136,7 @@ export default function ComoFunciona() {
                       financeiros e muitas outras funções.
                     </p>
 
-                    <p className='mt-2 text-loguin-blue'>
+                    <p className='mt-2 text-justify text-loguin-blue'>
                       Como o sistema é integrado, não há redigitação (portanto, sem
                       erros), unindo os dados da produção com a administração.
                     </p>
@@ -160,7 +160,7 @@ export default function ComoFunciona() {
                       dados e fornecendo relatórios precisos e concisos.
                     </p>
 
-                    <p className='mt-2 text-loguin-blue'>
+                    <p className='mt-2 text-justify text-loguin-blue'>
                       Ao aprimorar a parte operacional do seu negócio, essa ferramenta
                       permite que o gestor consiga satisfazer seus clientes e ampliar as
                       vendas.
