@@ -61,7 +61,7 @@ export default function Implantar() {
                 <div className='mr-4'>{item.icon}</div>
                 <div className='px-4'>
                   <h2 className='text-xl font-semibold text-gray-900'>{item.title}</h2>
-                  <p className='text-gray-700'>{item.description}</p>
+                  <p className='text-justify text-gray-700'>{item.description}</p>
                 </div>
               </div>
             ))}

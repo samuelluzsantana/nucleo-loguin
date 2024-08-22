@@ -215,7 +215,7 @@ export default function ComoFunciona() {
                   <p className='font-bold'>
                     <span className='mr-[0.5rem] text-loguin-red'>1.</span> CONTATO
                   </p>
-                  <p className='mt-2'>
+                  <p className='mt-2 text-justify'>
                     No contato inicial, vamos precisar de informações gerais do seu
                     negócio, como porte e segmento. Com isso, vamos agendar uma reunião.
                   </p>
@@ -226,7 +226,7 @@ export default function ComoFunciona() {
                     <span className='mr-[0.5rem] text-loguin-red'>2.</span> ENTENDIMENTO
                     DO NEGÓCIO
                   </p>
-                  <p className='mt-2'>
+                  <p className='mt-2 text-justify'>
                     Durante esse processo, vamos entender as suas necessidades e a
                     dinâmica da sua gráfica, para pensar a melhor estratégia de
                     implantação do sistema.
@@ -238,7 +238,7 @@ export default function ComoFunciona() {
                     <span className='mr-[0.5rem] text-loguin-red'>3.</span> COMPRA E
                     IMPLANTAÇÃO
                   </p>
-                  <p className='mt-2'>
+                  <p className='mt-2 text-justify'>
                     Com a contratação, nossa equipe vai cuidar da implantação do sistema,
                     dando total suporte antes, durante e por período acordado após esse
                     processo.
