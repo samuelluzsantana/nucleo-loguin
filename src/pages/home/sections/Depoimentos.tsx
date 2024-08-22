@@ -47,7 +47,7 @@ export default function Depoimentos() {
       linkedin: '#',
       site: '#',
       depoimento:
-        '"A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada."',
+        '"A atualização tecnológica é uma de nossas principais preocupações. Estamos atualizando continuamente.\n\nO Núcleo Loguin, com seu ERP GI-Gráfica Inteligente tem sido um dos nossos principais parceiros nessa jornada".',
     },
   ]
 
