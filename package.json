@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://www.nucleologuin.com.br/dist/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -30,6 +31,7 @@
     "react-toastify": "^10.0.5",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
+    "vite-plugin-ftp": "^0.0.8",
     "vite-plugin-static-copy": "^1.0.5"
   },
   "devDependencies": {
